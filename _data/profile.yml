@@ -1,0 +1,20 @@
+# =====================================================
+# emergence — anonymous demo data
+# =====================================================
+# Replace these values when using the theme for a real site.
+
+name: "emergence"
+name_ko: ""
+eyebrow: "emergence · design system preview"
+avatar: /assets/img/common/emergence-mark.png
+
+program: "Jekyll design system"
+institution: "Atmosphere · structure · interaction"
+status: "Sample content for local preview"
+
+email: ""
+cv_url: ""
+
+social:
+  github: ""
+  linkedin: ""

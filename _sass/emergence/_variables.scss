@@ -1,0 +1,326 @@
+// ============================================
+// Emergence Design System - Variables
+// ============================================
+
+// --------------------------------------------
+// Typography
+// --------------------------------------------
+
+$font-primary: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+$font-monospace: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+
+$fw-thin: 100;
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+
+$fs-xs: 0.75rem;
+$fs-sm: 0.85rem;
+$fs-base: 1rem;
+$fs-md: 1rem;
+$fs-lg: 1.2rem;
+$fs-xl: 1.5rem;
+$fs-2xl: 2rem;
+$fs-3xl: 3rem;
+$fs-hero: 8vw;
+$fs-home-hero: 12vw;
+
+// Editorial page scale
+$fs-display: clamp(3.75rem, 7.5vw, 6rem);
+$fs-lead: clamp(1.3rem, 2.2vw, 1.75rem);
+$fs-section-heading: clamp(1.25rem, 1.6vw, 1.5rem);
+$fs-project-heading: clamp(1.45rem, 1.9vw, 1.8rem);
+
+$ls-tight: -0.01em;
+$ls-normal: 0;
+$ls-wide: 0.02em;
+
+$lh-tight: 1;
+$lh-snug: 1.4;
+$lh-normal: 1.6;
+$lh-relaxed: 1.8;
+
+// --------------------------------------------
+// Visual
+// --------------------------------------------
+
+$blur-glass: blur(10px);
+$blur-nav: blur(15px);
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 20px;
+$radius-full: 50%;
+
+// --------------------------------------------
+// Spacing
+// --------------------------------------------
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-2xl: 4rem;
+
+// --------------------------------------------
+// Transitions
+// --------------------------------------------
+
+$transition-fast: 180ms ease;
+$transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 480ms ease-in;
+
+// --------------------------------------------
+// Breakpoints
+// --------------------------------------------
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 800px;
+$breakpoint-wide: 1280px;
+
+// --------------------------------------------
+// Z-Index
+// --------------------------------------------
+
+$z-background: -1;
+$z-base: 0;
+$z-dropdown: 10;
+$z-sticky: 100;
+$z-nav: 100;
+$z-modal: 1000;
+$z-tooltip: 2000;
+
+// ============================================
+// Image-led Glacier / Stellar fallbacks
+// ============================================
+// Jekyll emits the same values from _data/theme_dark.yml and
+// _data/theme_light.yml. These keep the Sass output usable on its own.
+
+:root {
+  --color-accent: #39C7F2;
+  --color-accent-light: #88E4FF;
+  --color-accent-dark: #1595C3;
+  --color-text-primary: #F1FAFF;
+  --color-text-secondary: rgba(225, 242, 255, 0.78);
+  --color-text-tertiary: rgba(204, 226, 244, 0.58);
+  --color-bg-body: #02040C;
+  --color-bg-glass: rgba(4, 15, 38, 0.58);
+  --color-bg-glass-hover: rgba(7, 23, 50, 0.74);
+  --color-bg-nav: rgba(2, 9, 26, 0.52);
+  --color-bg-nav-hero: rgba(2, 9, 26, 0.10);
+  --color-bg-overlay: rgba(0, 4, 18, 0.34);
+  --color-bg-nav-shadow: 0 12px 42px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --color-bg-nav-hero-shadow: none;
+  --color-panel-inner: rgba(4, 15, 38, 0.40);
+  --color-reading-surface: rgba(3, 13, 34, 0.86);
+  --color-sidebar-surface: rgba(3, 13, 34, 0.76);
+  --shadow-toggle: none;
+  --shadow-toggle-hover: 0 0 24px rgba(57, 199, 242, 0.28);
+  --color-border-glass: rgba(156, 223, 255, 0.24);
+  --color-border-glass-hover: rgba(136, 228, 255, 0.60);
+  --color-border-accent: rgba(57, 199, 242, 0.58);
+  --color-border-accent-hover: #88E4FF;
+  --color-tag-bg: rgba(57, 199, 242, 0.10);
+  --color-tag-border: rgba(136, 228, 255, 0.28);
+  --color-tag-text: rgba(225, 242, 255, 0.82);
+  --shadow-card: 0 24px 80px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  --shadow-card-hover: 0 28px 90px rgba(0, 0, 0, 0.44), 0 0 30px rgba(57, 199, 242, 0.11), inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  --shadow-panel: 0 12px 42px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-glow-primary: 0 0 30px rgba(57, 199, 242, 0.70);
+  --shadow-glow-secondary: 0 0 70px rgba(57, 199, 242, 0.30);
+  --shadow-text: 0 3px 22px rgba(0, 0, 0, 0.62), 0 0 44px rgba(24, 133, 201, 0.20);
+  --shadow-focus-ring: 0 0 0 3px rgba(136, 228, 255, 0.28);
+  --shadow-status-point: 0 0 12px currentColor;
+  --shadow-btn-glow: 0 0 20px rgba(57, 199, 242, 0.30);
+  --shadow-filter-active: 0 0 24px rgba(57, 199, 242, 0.28);
+  --shadow-tag-hover: 0 0 16px rgba(57, 199, 242, 0.30);
+  --shadow-tag-active: 0 0 20px rgba(57, 199, 242, 0.42);
+  --bg-image-fallback: url('../img/common/bg-dark.jpg');
+  --bg-image: image-set(url('../img/common/bg-dark-1920.avif') type('image/avif') 1x, url('../img/common/bg-dark-3840.avif') type('image/avif') 2x, url('../img/common/bg-dark-1920.webp') type('image/webp') 1x, url('../img/common/bg-dark-3840.webp') type('image/webp') 2x);
+  --bg-color-page: #02040C;
+  --bg-position: center center;
+  --bg-position-mobile: 56% center;
+  --bg-overlay-display: block;
+  --bg-overlay: rgba(0, 4, 18, 0.34);
+  --bg-overlay-page: linear-gradient(180deg, rgba(0, 2, 12, 0.08) 0%, rgba(1, 5, 18, 0.30) 42%, rgba(1, 6, 18, 0.80) 100%);
+  --bg-overlay-page-opacity: 1;
+  --surface-filter: blur(20px) saturate(1.18);
+  --surface-filter-nav: blur(24px) saturate(1.24);
+  --surface-filter-nav-hero: blur(6px) saturate(1.04);
+  --radius-atmosphere: 20px;
+  --radius-panel: 12px;
+  --radius-control: 999px;
+  --radius-point: 50%;
+  --color-btn-bg: rgba(57, 199, 242, 0.10);
+  --color-btn-bg-hover: rgba(57, 199, 242, 0.18);
+  --color-btn-primary-bg: rgba(57, 199, 242, 0.16);
+  --color-code-bg: rgba(0, 8, 24, 0.72);
+  --color-code-border: rgba(136, 228, 255, 0.20);
+  --color-code-text: #88E4FF;
+  --color-pre-bg: rgba(0, 5, 18, 0.82);
+  --color-project-gradient-1: rgba(20, 128, 196, 0.18);
+  --color-project-gradient-2: rgba(92, 73, 194, 0.16);
+  --color-project-gradient-h1: rgba(29, 159, 222, 0.26);
+  --color-project-gradient-h2: rgba(111, 92, 218, 0.24);
+  --color-project-icon: rgba(241, 250, 255, 0.28);
+  --color-filter-bg: rgba(57, 199, 242, 0.10);
+  --color-accent-bg-subtle: rgba(57, 199, 242, 0.08);
+  --color-accent-bg-light: rgba(57, 199, 242, 0.14);
+  --color-accent-bg-medium: rgba(57, 199, 242, 0.22);
+  --color-accent-glow: rgba(57, 199, 242, 0.34);
+  --color-accent-glow-strong: rgba(136, 228, 255, 0.54);
+  --color-nav-border: rgba(156, 223, 255, 0.20);
+  --color-nav-border-hero: rgba(156, 223, 255, 0.13);
+  --color-footer-border: rgba(225, 242, 255, 0.12);
+  --color-social-bg: rgba(57, 199, 242, 0.08);
+  --color-social-bg-hover: rgba(57, 199, 242, 0.16);
+  --color-separator: rgba(204, 226, 244, 0.20);
+  --color-table-header-bg: rgba(57, 199, 242, 0.12);
+  --color-select-option-bg: #06132A;
+  --color-tag-btn-text: rgba(225, 242, 255, 0.88);
+  --color-tag-btn-border: rgba(136, 228, 255, 0.30);
+  --color-hero-tagline: rgba(235, 248, 255, 0.88);
+  --shadow-hero-tagline: 0 2px 14px rgba(0, 0, 0, 0.68);
+  --color-status-completed: #67E2FF;
+  --color-status-completed-bg: rgba(103, 226, 255, 0.12);
+  --color-status-completed-bd: rgba(103, 226, 255, 0.42);
+  --color-status-progress: #FFD27A;
+  --color-status-progress-bg: rgba(255, 210, 122, 0.12);
+  --color-status-progress-bd: rgba(255, 210, 122, 0.38);
+  --color-status-planned: #B8C5D7;
+  --color-status-planned-bg: rgba(184, 197, 215, 0.10);
+  --color-status-planned-bd: rgba(184, 197, 215, 0.32);
+}
+
+[data-theme="light"] {
+  --color-accent: #0D5F9A;
+  --color-accent-light: #177CB8;
+  --color-accent-dark: #08466F;
+  --color-text-primary: #071426;
+  --color-text-secondary: rgba(7, 20, 38, 0.74);
+  --color-text-tertiary: rgba(7, 20, 38, 0.62);
+  --color-bg-body: #DCECF5;
+  --color-bg-glass: rgba(242, 249, 253, 0.70);
+  --color-bg-glass-hover: rgba(248, 252, 255, 0.86);
+  --color-bg-nav: rgba(237, 247, 252, 0.58);
+  --color-bg-nav-hero: rgba(237, 247, 252, 0.20);
+  --color-bg-overlay: rgba(225, 240, 248, 0.22);
+  --color-bg-nav-shadow: 0 12px 40px rgba(19, 70, 108, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.74);
+  --color-bg-nav-hero-shadow: 0 6px 20px rgba(19, 70, 108, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.42);
+  --color-panel-inner: rgba(247, 252, 255, 0.54);
+  --color-reading-surface: rgba(245, 251, 254, 0.90);
+  --color-sidebar-surface: rgba(245, 251, 254, 0.82);
+  --shadow-toggle: none;
+  --shadow-toggle-hover: 0 6px 22px rgba(13, 95, 154, 0.20);
+  --color-border-glass: rgba(22, 83, 126, 0.24);
+  --color-border-glass-hover: rgba(13, 95, 154, 0.54);
+  --color-border-accent: rgba(13, 95, 154, 0.48);
+  --color-border-accent-hover: #0D5F9A;
+  --color-tag-bg: rgba(13, 95, 154, 0.08);
+  --color-tag-border: rgba(13, 95, 154, 0.24);
+  --color-tag-text: rgba(7, 20, 38, 0.76);
+  --shadow-card: 0 24px 70px rgba(19, 70, 108, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  --shadow-card-hover: 0 30px 84px rgba(19, 70, 108, 0.22), 0 0 26px rgba(92, 177, 220, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.90);
+  --shadow-panel: 0 12px 36px rgba(19, 70, 108, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.70);
+  --shadow-glow-primary: 0 0 30px rgba(137, 222, 247, 0.62);
+  --shadow-glow-secondary: 0 0 60px rgba(255, 255, 255, 0.42);
+  --shadow-text: 0 2px 18px rgba(240, 249, 253, 0.76);
+  --shadow-focus-ring: 0 0 0 3px rgba(13, 95, 154, 0.22);
+  --shadow-status-point: 0 2px 8px rgba(19, 70, 108, 0.16);
+  --shadow-btn-glow: 0 6px 22px rgba(13, 95, 154, 0.18);
+  --shadow-filter-active: 0 8px 28px rgba(13, 95, 154, 0.18);
+  --shadow-tag-hover: 0 4px 16px rgba(13, 95, 154, 0.16);
+  --shadow-tag-active: 0 5px 20px rgba(13, 95, 154, 0.22);
+  --bg-image-fallback: url('../img/common/bg-light.jpg');
+  --bg-image: image-set(url('../img/common/bg-light-1920.avif') type('image/avif') 1x, url('../img/common/bg-light-3840.avif') type('image/avif') 2x, url('../img/common/bg-light-1920.webp') type('image/webp') 1x, url('../img/common/bg-light-3840.webp') type('image/webp') 2x);
+  --bg-color-page: #DCECF5;
+  --bg-position: center center;
+  --bg-position-mobile: 40% center;
+  --bg-overlay-display: block;
+  --bg-overlay: rgba(225, 240, 248, 0.22);
+  --bg-overlay-page: linear-gradient(180deg, rgba(238, 248, 252, 0.03) 0%, rgba(235, 246, 252, 0.14) 42%, rgba(235, 246, 252, 0.72) 100%);
+  --bg-overlay-page-opacity: 1;
+  --surface-filter: blur(20px) saturate(1.12);
+  --surface-filter-nav: blur(24px) saturate(1.16);
+  --surface-filter-nav-hero: blur(10px) saturate(1.05);
+  --radius-atmosphere: 20px;
+  --radius-panel: 12px;
+  --radius-control: 999px;
+  --radius-point: 50%;
+  --color-btn-bg: rgba(13, 95, 154, 0.08);
+  --color-btn-bg-hover: rgba(13, 95, 154, 0.15);
+  --color-btn-primary-bg: rgba(13, 95, 154, 0.13);
+  --color-code-bg: rgba(225, 240, 248, 0.78);
+  --color-code-border: rgba(13, 95, 154, 0.20);
+  --color-code-text: #08466F;
+  --color-pre-bg: rgba(231, 244, 251, 0.92);
+  --color-project-gradient-1: rgba(98, 178, 218, 0.18);
+  --color-project-gradient-2: rgba(103, 137, 203, 0.14);
+  --color-project-gradient-h1: rgba(72, 158, 204, 0.26);
+  --color-project-gradient-h2: rgba(77, 111, 188, 0.22);
+  --color-project-icon: rgba(7, 20, 38, 0.26);
+  --color-filter-bg: rgba(13, 95, 154, 0.08);
+  --color-accent-bg-subtle: rgba(13, 95, 154, 0.07);
+  --color-accent-bg-light: rgba(13, 95, 154, 0.12);
+  --color-accent-bg-medium: rgba(13, 95, 154, 0.20);
+  --color-accent-glow: rgba(13, 95, 154, 0.24);
+  --color-accent-glow-strong: rgba(13, 95, 154, 0.40);
+  --color-nav-border: rgba(22, 83, 126, 0.20);
+  --color-nav-border-hero: rgba(22, 83, 126, 0.13);
+  --color-footer-border: rgba(7, 20, 38, 0.14);
+  --color-social-bg: rgba(13, 95, 154, 0.07);
+  --color-social-bg-hover: rgba(13, 95, 154, 0.14);
+  --color-separator: rgba(7, 20, 38, 0.18);
+  --color-table-header-bg: rgba(13, 95, 154, 0.10);
+  --color-select-option-bg: #EAF5FA;
+  --color-tag-btn-text: rgba(7, 20, 38, 0.78);
+  --color-tag-btn-border: rgba(13, 95, 154, 0.26);
+  --color-hero-tagline: rgba(7, 20, 38, 0.82);
+  --shadow-hero-tagline: 0 2px 14px rgba(240, 249, 253, 0.82);
+  --color-status-completed: #0D5F9A;
+  --color-status-completed-bg: rgba(13, 95, 154, 0.10);
+  --color-status-completed-bd: rgba(13, 95, 154, 0.36);
+  --color-status-progress: #835A08;
+  --color-status-progress-bg: rgba(131, 90, 8, 0.10);
+  --color-status-progress-bd: rgba(131, 90, 8, 0.34);
+  --color-status-planned: #4B6077;
+  --color-status-planned-bg: rgba(75, 96, 119, 0.09);
+  --color-status-planned-bd: rgba(75, 96, 119, 0.30);
+}
+
+// ============================================
+// SCSS variables -> CSS custom properties
+// ============================================
+
+$color-primary-blue:        var(--color-accent);
+$color-primary-blue-light:  var(--color-accent-light);
+$color-primary-blue-dark:   var(--color-accent-dark);
+$color-text-primary:        var(--color-text-primary);
+$color-text-secondary:      var(--color-text-secondary);
+$color-text-tertiary:       var(--color-text-tertiary);
+$color-bg-glass:            var(--color-bg-glass);
+$color-bg-glass-hover:      var(--color-bg-glass-hover);
+$color-bg-nav:              var(--color-bg-nav);
+$color-bg-overlay:          var(--color-bg-overlay);
+$color-border-glass:        var(--color-border-glass);
+$color-border-glass-hover:  var(--color-border-glass-hover);
+$color-border-blue:         var(--color-border-accent);
+$color-border-blue-hover:   var(--color-border-accent-hover);
+$color-tag-bg:              var(--color-tag-bg);
+$color-tag-border:          var(--color-tag-border);
+$color-tag-text:            var(--color-tag-text);
+$shadow-card:               var(--shadow-card);
+$shadow-card-hover:         var(--shadow-card-hover);
+$shadow-glow-primary:       var(--shadow-glow-primary);
+$shadow-glow-secondary:     var(--shadow-glow-secondary);
+$shadow-text:               var(--shadow-text);
+$shadow-focus-ring:         var(--shadow-focus-ring);
+$shadow-btn-glow:           var(--shadow-btn-glow);
+$shadow-filter-active:      var(--shadow-filter-active);
+$shadow-tag-hover:          var(--shadow-tag-hover);
+$shadow-tag-active:         var(--shadow-tag-active);

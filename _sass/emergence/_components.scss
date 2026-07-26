@@ -1,0 +1,214 @@
+// ============================================
+// Emergence Design System - Components
+// ============================================
+@use 'variables' as *;
+
+// --------------------------------------------
+// Background Image (unified via CSS var)
+// --------------------------------------------
+
+.page-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $z-background;
+  // The photograph establishes the environment; the overlay only protects
+  // text contrast and never replaces the image.
+  background: var(--bg-color-page);
+  background-image: var(--bg-image-fallback);
+  @supports (background-image: image-set(url('../img/common/bg-dark.jpg') type('image/jpeg') 1x)) {
+    background-image: var(--bg-image);
+  }
+  background-size: cover;
+  background-position: var(--bg-position, center);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-overlay-page);
+    opacity: var(--bg-overlay-page-opacity);
+    display: var(--bg-overlay-display, block);
+  }
+}
+
+// --------------------------------------------
+// Glass Card
+// --------------------------------------------
+
+.glass-card {
+  background: $color-bg-glass;
+  backdrop-filter: var(--surface-filter);
+  -webkit-backdrop-filter: var(--surface-filter);
+  border-radius: var(--radius-panel);
+  border: 1px solid $color-border-glass;
+  box-shadow: $shadow-card;
+  padding: $spacing-lg;
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+
+  // light mode: keep 1px border (separation via border-color only)
+  [data-theme="light"] & {
+    border-width: 1px;
+  }
+
+  &--interactive:hover {
+    transform: translateY(-3px);
+    background: $color-bg-glass-hover;
+    box-shadow: $shadow-card-hover;
+    border-color: $color-border-glass-hover;
+  }
+}
+
+// --------------------------------------------
+// Tag & Badge
+// --------------------------------------------
+
+.tag,
+.badge {
+  display: inline-block;
+  font-size: $fs-xs;
+  font-weight: $fw-light;
+  color: $color-tag-text;
+  background: $color-tag-bg;
+  border: 1px solid $color-tag-border;
+  border-radius: $radius-md;
+  padding: $spacing-xs * 0.5 $spacing-xs * 1.5;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+
+  &:hover {
+    background: var(--color-accent-bg-light);
+    border-color: $color-border-blue-hover;
+  }
+}
+
+// --------------------------------------------
+// Button
+// --------------------------------------------
+
+.btn {
+  display: inline-block;
+  font-family: $font-primary;
+  font-size: $fs-base;
+  font-weight: $fw-light;
+  color: $color-text-primary;
+  background: var(--color-btn-bg);
+  border: 1px solid $color-border-blue;
+  border-radius: $radius-sm;
+  padding: $spacing-xs * 1.5 $spacing-lg;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background: var(--color-btn-bg-hover);
+    border-color: $color-border-blue-hover;
+    transform: translateY(-2px);
+    box-shadow: $shadow-card;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary-blue-light;
+    outline-offset: 3px;
+    box-shadow: var(--shadow-focus-ring);
+  }
+
+  i {
+    margin-right: $spacing-xs;
+  }
+}
+
+.btn-primary {
+  background: var(--color-btn-primary-bg);
+  border-color: $color-border-blue-hover;
+}
+
+.btn-large {
+  font-size: $fs-md;
+  padding: $spacing-sm $spacing-xl;
+  border-radius: $radius-md;
+}
+
+// --------------------------------------------
+// Page Container
+// --------------------------------------------
+
+.custom-page-container {
+  width: min(100% - 4rem, 1180px);
+  margin: 6rem auto 2rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--color-bg-glass);
+  border: 1px solid var(--color-border-glass);
+  border-radius: var(--radius-atmosphere);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: var(--surface-filter);
+  -webkit-backdrop-filter: var(--surface-filter);
+}
+
+// --------------------------------------------
+// Responsive
+// --------------------------------------------
+
+@media (max-width: 900px) {
+  .custom-page-container {
+    width: min(100% - 3rem, 1180px);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .custom-page-container {
+    width: min(100% - 2rem, 1180px);
+    margin-top: 5.5rem;
+    padding: 1.5rem;
+  }
+
+  .glass-card {
+    padding: $spacing-md;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .page-bg {
+    background-position: var(--bg-position-mobile, var(--bg-position, center));
+  }
+
+  .custom-page-container {
+    width: min(100% - 1.5rem, 1180px);
+    padding: 1.25rem;
+    border-radius: var(--radius-atmosphere);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-card,
+  .btn {
+    transition: none;
+  }
+
+  .glass-card--interactive:hover,
+  .btn:hover,
+  .btn:active {
+    transform: none;
+  }
+}

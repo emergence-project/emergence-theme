@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+require "find"
+
+ROOT = File.expand_path("..", __dir__)
+IGNORED_DIRS = %w[.git .jekyll-cache .sass-cache .bundle vendor].freeze
+TEXT_EXTENSIONS = %w[
+  .css .html .js .json .md .rb .scss .sh .txt .xml .yaml .yml
+].freeze
+IMAGE_EXTENSIONS = %w[.avif .ico .jpeg .jpg .png .webp].freeze
+
+private_handle = ["sung", "min", "-park-dev"].join
+private_name = Regexp.new(["sung", '[-\\s]?', "min"].join, Regexp::IGNORECASE)
+private_mail = ["park", "sm", "0226", "@", "naver.com"].join
+subject_markers = [
+  ["quan", "tum"].join,
+  ["ten", "sor"].join,
+  ["many", "-body"].join,
+  ["phy", "sics"].join,
+  ["machine", " learning"].join,
+  ["neu", "ral network"].join
+].freeze
+
+TEXT_PATTERNS = [
+  ["private maintainer handle", Regexp.new(Regexp.escape(private_handle), Regexp::IGNORECASE)],
+  ["private author name", private_name],
+  ["private email", Regexp.new(Regexp.escape(private_mail), Regexp::IGNORECASE)]
+].concat(
+  subject_markers.map do |marker|
+    ["subject-specific demo residue", Regexp.new(Regexp.escape(marker), Regexp::IGNORECASE)]
+  end
+).freeze
+
+BINARY_MARKERS = [
+  "Exif",
+  "xmpmeta",
+  "GPSLatitude",
+  "GPSLongitude",
+  "DateTimeOriginal",
+  "photoshop:City",
+  private_handle,
+  private_mail
+].freeze
+
+violations = []
+
+Find.find(ROOT) do |path|
+  relative = path.delete_prefix("#{ROOT}/")
+
+  if File.directory?(path)
+    if relative != "." && relative.split(File::SEPARATOR).any? { |part| IGNORED_DIRS.include?(part) }
+      Find.prune
+    else
+      next
+    end
+  end
+
+  extension = File.extname(path).downcase
+
+  if TEXT_EXTENSIONS.include?(extension) || File.basename(path) == "LICENSE"
+    content = File.binread(path).force_encoding(Encoding::UTF_8)
+    next unless content.valid_encoding?
+
+    content.each_line.with_index(1) do |line, line_number|
+      TEXT_PATTERNS.each do |label, pattern|
+        violations << "#{relative}:#{line_number}: #{label}" if line.match?(pattern)
+      end
+    end
+  elsif IMAGE_EXTENSIONS.include?(extension)
+    content = File.binread(path)
+    BINARY_MARKERS.each do |marker|
+      violations << "#{relative}: embedded image metadata or private marker" if content.include?(marker)
+    end
+  end
+end
+
+legacy_preview = File.join(ROOT, "assets/img/common/social-preview.png")
+violations << "assets/img/common/social-preview.png: legacy preview must stay removed" if File.exist?(legacy_preview)
+
+unless violations.empty?
+  warn "Public demo check failed:"
+  violations.uniq.sort.each { |violation| warn "  - #{violation}" }
+  exit 1
+end
+
+puts "Public demo check passed."

@@ -1,0 +1,14 @@
+{% assign item = include.reading %}
+<a href="{{ item.url | relative_url }}" class="reading-entry">
+  <span class="reading-entry__title">{{ item.title }}</span>
+  {% if item.date %}
+    <span class="reading-entry__date">{{ item.date | date: "%b %d, %Y" }}</span>
+  {% endif %}
+  {% if item.tags.size > 0 %}
+    <ul class="reading-entry__tags" aria-label="Reading topics">
+      {% for tag in item.tags limit: 4 %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</a>

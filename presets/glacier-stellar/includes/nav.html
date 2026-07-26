@@ -1,0 +1,19 @@
+<nav
+  class="top-nav{% if page.url == '/' %} top-nav--hero{% else %} top-nav--content{% endif %}"
+  data-nav-context="{% if page.url == '/' %}hero{% else %}content{% endif %}"
+  aria-label="Primary"
+>
+  <a href="{{ '/' | relative_url }}" class="logo" aria-label="emergence home" translate="no">emergence<span class="logo__dot">.</span></a>
+  <div class="nav-links" id="primary-nav" translate="no">
+    <a href="{{ '/#project-index' | relative_url }}" data-nav-section="projects"{% if page.collection == 'projects' %} class="active" aria-current="location"{% endif %}>projects</a>
+    <a href="{{ '/notes/' | relative_url }}"{% if page.url contains '/notes' %} class="active" aria-current="page"{% endif %}>notes</a>
+    <a href="{{ '/readings/' | relative_url }}"{% if page.url contains '/readings' %} class="active" aria-current="page"{% endif %}>readings</a>
+    <a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about' %} class="active" aria-current="page"{% endif %}>about</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
+    <i class="fas fa-sun" id="theme-icon" aria-hidden="true"></i>
+  </button>
+  <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>

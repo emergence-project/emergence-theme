@@ -1,0 +1,127 @@
+// ============================================
+// Base Styles
+// ============================================
+@use 'variables' as *;
+
+// --------------------------------------------
+// Base Reset
+// --------------------------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: $z-modal;
+  padding: 0.65rem 0.9rem;
+  color: $color-text-primary;
+  background: var(--color-reading-surface);
+  border: 1px solid $color-primary-blue-light;
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-panel);
+  transform: translateY(-200%);
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: clip;
+  background: var(--color-bg-body);
+  min-height: 100vh;
+}
+
+body {
+  // Keep the fixed Field layer behind content without sending it behind the
+  // opaque page canvas.
+  isolation: isolate;
+}
+
+// --------------------------------------------
+// Utility Classes
+// --------------------------------------------
+
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+.mt-sm { margin-top: $spacing-sm; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+.mt-xl { margin-top: $spacing-xl; }
+
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+.mb-xl { margin-bottom: $spacing-xl; }
+
+.p-sm { padding: $spacing-sm; }
+.p-md { padding: $spacing-md; }
+.p-lg { padding: $spacing-lg; }
+.p-xl { padding: $spacing-xl; }
+
+// --------------------------------------------
+// Site Footer
+// --------------------------------------------
+
+.site-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  text-align: center;
+  padding: $spacing-md $spacing-lg;
+  font-size: $fs-xs;
+  font-weight: $fw-light;
+  color: $color-text-tertiary;
+  letter-spacing: 0.08em;
+  margin-top: $spacing-xl;
+}
+
+.photo-credit {
+  font-size: 0.68rem;
+
+  a {
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+[data-theme="light"] .photo-credit--dark {
+  display: none;
+}
+
+[data-theme="dark"] .photo-credit--light {
+  display: none;
+}
+
+// Homepage only — above background image, normal flow (naturally below cards)
+.site-footer-home {
+  position: relative;
+  margin-top: $spacing-lg;
+  padding: $spacing-sm $spacing-lg $spacing-md;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  .custom-page-container,
+  .post-container {
+    opacity: 1;
+    animation: none;
+  }
+}

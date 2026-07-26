@@ -1,0 +1,105 @@
+---
+layout: base
+title: "projects"
+description: "An image-led Jekyll design system for portfolios, notes, and reading lists."
+---
+
+<div class="page-bg"></div>
+{% include nav.html %}
+
+<main class="project-home" id="main-content">
+  <header class="project-hero">
+    <p class="project-hero__eyebrow" translate="no">
+      {{ site.data.profile.eyebrow | default: "emergence · design system preview" }}
+    </p>
+    <h1 aria-label="emergence" translate="no">
+      <span>emergence</span><span class="project-hero__dot">.</span>
+    </h1>
+    <p class="project-hero__tagline">{{ site.description }}</p>
+    <a class="project-hero__cue" href="#project-index">
+      explore the system <span aria-hidden="true">↓</span>
+    </a>
+  </header>
+
+  {% assign research_projects = site.projects | where: "project_type", "research" | sort: "order" %}
+  {% assign systems_projects = site.projects | where: "project_type", "systems" | sort: "order" %}
+
+  <section class="project-index" id="project-index" aria-labelledby="project-index-title">
+    <div class="project-index__header">
+      <p class="project-index__label" translate="no">selected work / 01—02</p>
+      <h2 id="project-index-title">projects<span class="project-hero__dot">.</span></h2>
+    </div>
+
+    <div class="project-tabs" role="tablist" aria-label="Project categories">
+      <button type="button" class="project-tab active" role="tab" aria-selected="true" aria-controls="research-panel" id="research-tab" data-target="research-panel">
+        <span class="project-tab__number" aria-hidden="true">01</span> design explorations
+      </button>
+      <button type="button" class="project-tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="systems-panel" id="systems-tab" data-target="systems-panel">
+        <span class="project-tab__number" aria-hidden="true">02</span> site systems
+      </button>
+    </div>
+
+    <section class="project-panel" id="research-panel" role="tabpanel" aria-labelledby="research-tab">
+      <p class="project-panel__intro">
+        Layout, typography, and interaction studies that show the visual
+        language in context.
+      </p>
+      <div class="project-list">
+        {% for project in research_projects %}
+          {% include project-card.html project=project index=forloop.index %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="project-panel" id="systems-panel" role="tabpanel" aria-labelledby="systems-tab" hidden>
+      <p class="project-panel__intro">
+        Tokens, templates, and publishing workflows that keep the site
+        coherent.
+      </p>
+      <div class="project-list">
+        {% for project in systems_projects %}
+          {% include project-card.html project=project index=forloop.index %}
+        {% endfor %}
+      </div>
+    </section>
+  </section>
+</main>
+
+<script>
+  (function () {
+    var tabs = Array.from(document.querySelectorAll('.project-tab'));
+    var panels = Array.from(document.querySelectorAll('.project-panel'));
+
+    function activate(tab) {
+      tabs.forEach(function (t) {
+        var selected = t === tab;
+        t.classList.toggle('active', selected);
+        t.setAttribute('aria-selected', selected);
+        t.tabIndex = selected ? 0 : -1;
+      });
+      panels.forEach(function (panel) {
+        panel.hidden = panel.id !== tab.getAttribute('aria-controls');
+      });
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () {
+        activate(tab);
+      });
+      tab.addEventListener('keydown', function (e) {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' && e.key !== 'Home' && e.key !== 'End') return;
+        e.preventDefault();
+        var next;
+        if (e.key === 'Home') {
+          next = tabs[0];
+        } else if (e.key === 'End') {
+          next = tabs[tabs.length - 1];
+        } else {
+          next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+        }
+        next.focus();
+        activate(next);
+      });
+    });
+  })();
+</script>

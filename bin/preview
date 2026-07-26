@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -eu
+
+repo_root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+cd "$repo_root"
+
+preview_host=${PREVIEW_HOST:-127.0.0.1}
+preview_port=${PREVIEW_PORT:-4000}
+preview_livereload=${PREVIEW_LIVERELOAD:-1}
+preview_livereload_port=${PREVIEW_LIVERELOAD_PORT:-35729}
+
+set -- \
+  --host "$preview_host" \
+  --port "$preview_port" \
+  --baseurl "" \
+  "$@"
+
+if [ "$preview_livereload" != "0" ]; then
+  set -- \
+    --livereload \
+    --livereload-port "$preview_livereload_port" \
+    "$@"
+fi
+
+if [ "$preview_host" = "0.0.0.0" ]; then
+  echo "Starting emergence at http://localhost:${preview_port} (network access enabled)"
+else
+  echo "Starting emergence at http://${preview_host}:${preview_port}"
+fi
+
+if command -v rbenv >/dev/null 2>&1; then
+  if ! rbenv exec bundle check >/dev/null 2>&1; then
+    echo "Installing Ruby dependencies..."
+    rbenv exec bundle install
+  fi
+
+  LANG=en_US.UTF-8 exec rbenv exec bundle exec jekyll serve "$@"
+else
+  if ! bundle check >/dev/null 2>&1; then
+    echo "Installing Ruby dependencies..."
+    bundle install
+  fi
+
+  LANG=en_US.UTF-8 exec bundle exec jekyll serve "$@"
+fi

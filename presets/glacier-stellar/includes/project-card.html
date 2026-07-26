@@ -1,0 +1,41 @@
+{% unless include.project.published == false %}
+{% assign project = include.project %}
+{% assign project_link = project.url %}
+{% assign project_is_external = false %}
+{% if project.link and project.link != '#' %}
+  {% assign project_link = project.link %}
+  {% if project.link contains '://' %}
+    {% assign project_is_external = true %}
+  {% endif %}
+{% endif %}
+{% if project_is_external %}
+  {% assign project_href = project_link %}
+{% else %}
+  {% assign project_href = project_link | relative_url %}
+{% endif %}
+{% assign project_number = include.index | prepend: "0" | slice: -2, 2 %}
+<article class="project-entry project-entry--{{ project.status }}">
+  <div class="project-entry__meta">
+    <span class="project-entry__index" aria-hidden="true">{{ project_number }}</span>
+    <span class="project-entry__status project-entry__status--{{ project.status }}">
+      {{ project.status | replace: "-", " " }}
+    </span>
+  </div>
+
+  <h3 class="project-entry__title">{{ project.title }}</h3>
+
+  <p class="project-entry__description">{{ project.description }}</p>
+
+  <ul class="project-entry__tags" aria-label="Project topics">
+    {% for tag in project.tags limit: 3 %}
+      <li>{{ tag }}</li>
+    {% endfor %}
+  </ul>
+
+  {% if project.status == "completed" %}
+    <a href="{{ project_href }}" class="project-entry__link" aria-label="View {{ project.title | escape }}">
+      view project <span aria-hidden="true">{% if project_is_external %}↗{% else %}→{% endif %}</span>
+    </a>
+  {% endif %}
+</article>
+{% endunless %}
