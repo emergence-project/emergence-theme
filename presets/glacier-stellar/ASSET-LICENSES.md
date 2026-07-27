@@ -1,9 +1,9 @@
-# Glacier / Stellar media notices
+# Glacier / Galaxy media notices
 
 The repository's MIT software license does not automatically apply to the
 photographs or composite preview listed here. Each asset has its own terms.
 
-## `assets/bg-dark*` — Stellar Field
+## `assets/bg-dark*` — Galaxy
 
 - Work: `Colorful galaxy`
 - Creator: Jeremy Thomas
@@ -21,9 +21,9 @@ Commons records this specific work as released under CC0 1.0:
 Attribution is not required by CC0, but the preset retains a respectful credit
 in its footer.
 
-## `assets/bg-light*` — Deep Glacier
+## `assets/bg-light*` — Glacier
 
-- Work: `Deep Glacier`
+- Work: `Glacier`
 - Creator credit: Emergence Project
 - Copyright: © 2025 Emergence Project
 - Source: original photograph supplied for this preset
@@ -39,11 +39,11 @@ a compressed, metadata-stripped derivative.
 
 ## `assets/social-preview.jpg`
 
-- Work: composite Glacier / Stellar preset preview
+- Work: composite Glacier / Galaxy preset preview
 - Design: © 2026 Emergence Project
 - Components: includes derivatives of both photographs above
 - License: [CC BY 4.0 International](https://creativecommons.org/licenses/by/4.0/)
 
 The composite may be shared or adapted under CC BY 4.0 with credit to
-`Emergence Project`. The Stellar Field component remains CC0; the Deep Glacier
+`Emergence Project`. The Galaxy component remains CC0; the Glacier
 component and the composite design require attribution.

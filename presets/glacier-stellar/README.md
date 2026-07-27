@@ -1,12 +1,12 @@
-# Deep Glacier / Stellar Field design-system preset
+# Glacier / Galaxy design-system preset
 
 This preset provides the image-led identity used by the repository's anonymous
 live demo and packages it for reuse with the Emergence content model.
 
-- **Deep Glacier** uses the glacial landscape as its light environment, with
+- **Glacier** uses the glacial landscape as its light environment, with
   translucent ice surfaces, deep navy type, diffuse shadows, and soft blue
   optical edges.
-- **Stellar Field** uses the galaxy photograph as its dark environment, with
+- **Galaxy** uses the galaxy photograph as its dark environment, with
   indigo glass, cool white type, cyan starlight, and restrained glow.
 
 It is a complete installation-time design preset, not a color swap. It includes
@@ -53,7 +53,7 @@ contracts.
 
 ## Source and license
 
-The Stellar Field image is
+The Galaxy image is
 [`Colorful galaxy` by Jeremy Thomas](https://unsplash.com/photos/blue-and-purple-galaxy-digital-wallpaper-E0AHdsENmDg);
 the included base layout preserves that credit. Media licensing is documented
 separately from the theme's software license in

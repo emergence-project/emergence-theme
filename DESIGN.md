@@ -88,7 +88,7 @@ Presets are installation-time choices, not additional runtime theme modes.
 The neutral flat editorial system remains the foundation and portable baseline
 described above. The checked-out anonymous demo intentionally has the
 [`glacier-stellar`](presets/glacier-stellar/) preset applied so the advertised
-design can be experienced immediately. Its glacier and stellar photographs are
+design can be experienced immediately. Its glacier and galaxy photographs are
 primary environment layers, while translucent optical surfaces make the same
 content contracts readable over those images. Re-running the preset installer
 restores that demo state after experimentation.

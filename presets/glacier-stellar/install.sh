@@ -59,4 +59,4 @@ cp "$preset_dir/tabs/notes.md" "$theme_root/_tabs/notes.md"
 cp "$preset_dir/tabs/readings.md" "$theme_root/_tabs/readings.md"
 cp "$preset_dir/index.html" "$theme_root/index.html"
 
-echo "Installed the Deep Glacier / Stellar Field preset."
+echo "Installed the Glacier / Galaxy preset."
