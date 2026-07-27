@@ -9,4 +9,4 @@ accessible interactions, collection contracts, and the existing light/dark
 preference. Presets do not add extra runtime theme modes.
 
 - [`glacier-stellar`](glacier-stellar/) — a complete image-led system with a
-  Deep Glacier light environment and Stellar Field dark environment
+  Glacier light environment and Galaxy dark environment

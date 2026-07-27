@@ -23,5 +23,5 @@ contrast, stability, or navigation clarity of the content placed above it.
 
 ## Applied here
 
-The Glacier and Stellar environments share one structural grammar while using
+The Glacier and Galaxy environments share one structural grammar while using
 different optical treatments.

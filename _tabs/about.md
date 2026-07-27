@@ -51,7 +51,7 @@ description: "How emergence balances atmosphere, structure, and interaction."
             </span>
           </dt>
           <dd class="system-role__description">
-            <p>The glacier and stellar photographs form one uninterrupted
+            <p>The glacier and galaxy photographs form one uninterrupted
             place. The hero remains open so the environment can lead.</p>
             <p class="system-role__use"><span>seen in</span> background · hero</p>
           </dd>
@@ -107,7 +107,7 @@ description: "How emergence balances atmosphere, structure, and interaction."
       </dl>
 
       <p class="system-grammar__environment"><strong>Two environments, one
-      grammar.</strong> Deep Glacier and Stellar Field share structure without
+      grammar.</strong> Glacier and Galaxy share structure without
       becoming simple color inversions. Each tunes transparency, edge
       contrast, shadow, and image crop for its own light.</p>
     </div>

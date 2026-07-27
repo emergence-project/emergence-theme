@@ -1,11 +1,11 @@
 # emergence
 
 An image-led Jekyll design system for portfolios, notes, and reading lists.
-Deep Glacier is the light environment; Stellar Field is the dark environment.
+Glacier is the light environment; Galaxy is the dark environment.
 Both use the same calm structure, content contracts, and accessible
 interactions.
 
-[![Deep Glacier and Stellar Field preview](presets/glacier-stellar/assets/social-preview.jpg)](presets/glacier-stellar/)
+[![Glacier and Galaxy preview](presets/glacier-stellar/assets/social-preview.jpg)](presets/glacier-stellar/)
 
 The checked-out repository is a complete anonymous demo. It contains generic
 design-system specimens rather than a person's name, contact details, profile,
@@ -38,7 +38,7 @@ with `PREVIEW_PORT`; LiveReload can also use a separate
 
 The demo includes:
 
-- image-led Glacier and Stellar environments with a persistent theme toggle
+- image-led Glacier and Galaxy environments with a persistent theme toggle
 - projects covering completed, in-progress, and planned states
 - Notes and Readings collection indexes
 - long-form pages with a table of contents and related-content patterns
@@ -47,12 +47,12 @@ The demo includes:
 ## Design references
 
 - [DESIGN.md](DESIGN.md) — the neutral editorial foundation
-- [Glacier / Stellar DESIGN.md](presets/glacier-stellar/DESIGN.md) — the active image-led visual grammar
+- [Glacier / Galaxy DESIGN.md](presets/glacier-stellar/DESIGN.md) — the active image-led visual grammar
 - [COMPONENTS.md](COMPONENTS.md) — reusable component inventory
 - [tokens/](tokens/) — portable neutral token export
-- [preset tokens](presets/glacier-stellar/tokens/) — portable Glacier / Stellar token export
+- [preset tokens](presets/glacier-stellar/tokens/) — portable Glacier / Galaxy token export
 
-The active checkout already has the Glacier / Stellar preset applied. The
+The active checkout already has the Glacier / Galaxy preset applied. The
 installer remains as an idempotent way to restore those files after
 experimentation:
 
