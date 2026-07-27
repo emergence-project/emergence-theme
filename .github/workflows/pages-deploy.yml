@@ -52,7 +52,8 @@ jobs:
 
       - name: Check generated site
         run: |
-          bundle exec htmlproofer _site --disable-external
+          bundle exec htmlproofer _site --disable-external \
+            --swap-urls "^${{ steps.pages.outputs.base_path }}/:/"
           ./bin/check-public
 
       - name: Upload site artifact
