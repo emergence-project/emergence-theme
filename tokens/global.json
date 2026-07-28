@@ -1,8 +1,8 @@
 {
   "font": {
     "family": {
-      "primary": { "value": "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif" },
-      "monospace": { "value": "'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace" }
+      "primary": { "value": "'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif" },
+      "monospace": { "value": "'JetBrains Mono', 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace" }
     },
     "weight": {
       "thin": { "value": "100" },

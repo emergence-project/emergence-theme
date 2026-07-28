@@ -1,172 +1,190 @@
 {
   "color": {
     "accent": {
-      "value": "#7C9DFF"
+      "value": "#86AFC1"
     },
     "accent-light": {
-      "value": "#A9BCFF"
+      "value": "#B1CDD8"
     },
     "accent-dark": {
-      "value": "#5B7CE2"
+      "value": "#628698"
     },
     "text-primary": {
-      "value": "#F4F5F7"
+      "value": "#EEF2F4"
     },
     "text-secondary": {
-      "value": "rgba(244, 245, 247, 0.68)"
+      "value": "rgba(238, 242, 244, 0.74)"
     },
     "text-tertiary": {
-      "value": "rgba(244, 245, 247, 0.43)"
+      "value": "rgba(238, 242, 244, 0.52)"
     },
     "bg-body": {
-      "value": "#0D0F12"
+      "value": "#05070B"
     },
     "bg-glass": {
-      "value": "#12151A"
+      "value": "rgba(9, 13, 20, 0.95)"
     },
     "bg-glass-hover": {
-      "value": "#171B21"
+      "value": "rgba(11, 16, 24, 0.98)"
     },
     "bg-nav": {
-      "value": "rgba(13, 15, 18, 0.94)"
+      "value": "rgba(8, 12, 18, 0.66)"
+    },
+    "bg-nav-hero": {
+      "value": "rgba(5, 8, 13, 0.14)"
     },
     "bg-overlay": {
-      "value": "transparent"
+      "value": "rgba(4, 8, 14, 0.28)"
     },
     "bg-nav-shadow": {
+      "value": "0 8px 28px rgba(0, 0, 0, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.05)"
+    },
+    "bg-nav-hero-shadow": {
       "value": "none"
     },
+    "panel-inner": {
+      "value": "rgba(12, 17, 24, 0.52)"
+    },
+    "reading-surface": {
+      "value": "rgba(8, 12, 18, 0.98)"
+    },
+    "sidebar-surface": {
+      "value": "rgba(8, 12, 18, 0.96)"
+    },
     "border-glass": {
-      "value": "rgba(244, 245, 247, 0.16)"
+      "value": "rgba(218, 230, 236, 0.16)"
     },
     "border-glass-hover": {
-      "value": "rgba(244, 245, 247, 0.32)"
+      "value": "rgba(177, 205, 216, 0.36)"
     },
     "border-accent": {
-      "value": "rgba(124, 157, 255, 0.65)"
+      "value": "rgba(134, 175, 193, 0.36)"
     },
     "border-accent-hover": {
-      "value": "#A9BCFF"
+      "value": "#B1CDD8"
     },
     "tag-bg": {
       "value": "transparent"
     },
     "tag-border": {
-      "value": "rgba(244, 245, 247, 0.18)"
+      "value": "rgba(218, 230, 236, 0.18)"
     },
     "tag-text": {
-      "value": "rgba(244, 245, 247, 0.68)"
+      "value": "rgba(238, 242, 244, 0.68)"
     },
     "btn-bg": {
       "value": "transparent"
     },
     "btn-bg-hover": {
-      "value": "rgba(124, 157, 255, 0.08)"
+      "value": "rgba(134, 175, 193, 0.08)"
     },
     "btn-primary-bg": {
-      "value": "rgba(124, 157, 255, 0.10)"
+      "value": "rgba(134, 175, 193, 0.10)"
     },
     "code-bg": {
-      "value": "#151920"
+      "value": "rgba(4, 8, 13, 0.64)"
     },
     "code-border": {
-      "value": "rgba(244, 245, 247, 0.14)"
+      "value": "rgba(218, 230, 236, 0.16)"
     },
     "code-text": {
-      "value": "#A9BCFF"
+      "value": "#B1CDD8"
     },
     "pre-bg": {
-      "value": "#090B0E"
+      "value": "rgba(4, 8, 13, 0.78)"
     },
     "project-gradient-1": {
-      "value": "#12151A"
+      "value": "rgba(98, 134, 152, 0.10)"
     },
     "project-gradient-2": {
-      "value": "#12151A"
+      "value": "rgba(100, 108, 132, 0.08)"
     },
     "project-gradient-h1": {
-      "value": "#171B21"
+      "value": "rgba(98, 134, 152, 0.14)"
     },
     "project-gradient-h2": {
-      "value": "#171B21"
+      "value": "rgba(100, 108, 132, 0.12)"
     },
     "project-icon": {
-      "value": "rgba(244, 245, 247, 0.30)"
+      "value": "rgba(238, 242, 244, 0.22)"
     },
     "filter-bg": {
-      "value": "transparent"
+      "value": "rgba(134, 175, 193, 0.06)"
     },
     "accent-bg-subtle": {
-      "value": "rgba(124, 157, 255, 0.08)"
+      "value": "rgba(134, 175, 193, 0.06)"
     },
     "accent-bg-light": {
-      "value": "rgba(124, 157, 255, 0.12)"
+      "value": "rgba(134, 175, 193, 0.09)"
     },
     "accent-bg-medium": {
-      "value": "rgba(124, 157, 255, 0.18)"
+      "value": "rgba(134, 175, 193, 0.14)"
     },
     "accent-glow": {
-      "value": "rgba(124, 157, 255, 0.24)"
+      "value": "rgba(134, 175, 193, 0.18)"
     },
     "accent-glow-strong": {
-      "value": "#7C9DFF"
+      "value": "rgba(177, 205, 216, 0.28)"
     },
     "nav-border": {
-      "value": "rgba(244, 245, 247, 0.13)"
+      "value": "rgba(218, 230, 236, 0.14)"
+    },
+    "nav-border-hero": {
+      "value": "rgba(218, 230, 236, 0.10)"
     },
     "footer-border": {
-      "value": "rgba(244, 245, 247, 0.13)"
+      "value": "rgba(238, 242, 244, 0.12)"
     },
     "social-bg": {
       "value": "transparent"
     },
     "social-bg-hover": {
-      "value": "rgba(124, 157, 255, 0.08)"
+      "value": "rgba(134, 175, 193, 0.08)"
     },
     "separator": {
-      "value": "rgba(244, 245, 247, 0.16)"
+      "value": "rgba(218, 230, 236, 0.16)"
     },
     "table-header-bg": {
-      "value": "#151920"
+      "value": "rgba(134, 175, 193, 0.07)"
     },
     "select-option-bg": {
-      "value": "#12151A"
+      "value": "#0C1118"
     },
     "tag-btn-text": {
-      "value": "rgba(244, 245, 247, 0.68)"
+      "value": "rgba(238, 242, 244, 0.72)"
     },
     "tag-btn-border": {
-      "value": "rgba(244, 245, 247, 0.18)"
+      "value": "rgba(218, 230, 236, 0.18)"
     },
     "hero-tagline": {
-      "value": "rgba(244, 245, 247, 0.68)"
+      "value": "rgba(238, 242, 244, 0.86)"
     },
     "status-completed": {
-      "value": "#7C9DFF"
+      "value": "#9ABBC8"
     },
     "status-completed-bg": {
-      "value": "rgba(124, 157, 255, 0.10)"
+      "value": "rgba(154, 187, 200, 0.08)"
     },
     "status-completed-bd": {
-      "value": "rgba(124, 157, 255, 0.35)"
+      "value": "rgba(154, 187, 200, 0.28)"
     },
     "status-progress": {
-      "value": "#D6A756"
+      "value": "#C2AE82"
     },
     "status-progress-bg": {
-      "value": "rgba(214, 167, 86, 0.10)"
+      "value": "rgba(194, 174, 130, 0.08)"
     },
     "status-progress-bd": {
-      "value": "rgba(214, 167, 86, 0.35)"
+      "value": "rgba(194, 174, 130, 0.26)"
     },
     "status-planned": {
-      "value": "#8B929D"
+      "value": "#A2ABB5"
     },
     "status-planned-bg": {
-      "value": "rgba(139, 146, 157, 0.10)"
+      "value": "rgba(162, 171, 181, 0.07)"
     },
     "status-planned-bd": {
-      "value": "rgba(139, 146, 157, 0.30)"
+      "value": "rgba(162, 171, 181, 0.24)"
     }
   },
   "shadow": {
@@ -182,17 +200,23 @@
     "card-hover": {
       "value": "none"
     },
-    "glow-primary": {
+    "panel": {
       "value": "none"
+    },
+    "glow-primary": {
+      "value": "0 0 14px rgba(134, 175, 193, 0.28)"
     },
     "glow-secondary": {
       "value": "none"
     },
     "text": {
-      "value": "none"
+      "value": "0 2px 14px rgba(0, 0, 0, 0.65)"
     },
     "focus-ring": {
-      "value": "0 0 0 3px rgba(124, 157, 255, 0.18)"
+      "value": "0 0 0 3px rgba(177, 205, 216, 0.30)"
+    },
+    "status-point": {
+      "value": "none"
     },
     "btn-glow": {
       "value": "none"
@@ -207,27 +231,57 @@
       "value": "none"
     },
     "hero-tagline": {
-      "value": "none"
+      "value": "0 2px 14px rgba(0, 0, 0, 0.68)"
     }
   },
   "bg": {
+    "image-fallback": {
+      "value": "url('../img/common/bg-dark.jpg')"
+    },
     "image": {
-      "value": "none"
+      "value": "image-set(url('../img/common/bg-dark-1920.avif') type('image/avif') 1x, url('../img/common/bg-dark-3840.avif') type('image/avif') 2x, url('../img/common/bg-dark-1920.webp') type('image/webp') 1x, url('../img/common/bg-dark-3840.webp') type('image/webp') 2x)"
     },
     "color-page": {
-      "value": "#0D0F12"
+      "value": "#05070B"
+    },
+    "position": {
+      "value": "center center"
+    },
+    "position-mobile": {
+      "value": "56% center"
     },
     "overlay-display": {
-      "value": "none"
+      "value": "block"
     },
     "overlay": {
-      "value": "transparent"
+      "value": "rgba(4, 8, 14, 0.28)"
     },
     "overlay-page": {
-      "value": "transparent"
+      "value": "linear-gradient(180deg, rgba(3, 6, 11, 0.06) 0%, rgba(4, 8, 14, 0.28) 42%, rgba(5, 8, 13, 0.76) 100%)"
     },
     "overlay-page-opacity": {
-      "value": "0"
+      "value": "1"
     }
+  },
+  "surface-filter": {
+    "value": "blur(12px) saturate(0.90)"
+  },
+  "surface-filter-nav": {
+    "value": "blur(14px) saturate(0.92)"
+  },
+  "surface-filter-nav-hero": {
+    "value": "blur(4px) saturate(0.90)"
+  },
+  "radius-atmosphere": {
+    "value": "6px"
+  },
+  "radius-panel": {
+    "value": "4px"
+  },
+  "radius-control": {
+    "value": "2px"
+  },
+  "radius-point": {
+    "value": "50%"
   }
 }

@@ -62,34 +62,26 @@
   text-shadow: var(--shadow-hero-tagline);
 }
 
+// A single Trace cue on the open Field — text and a thin rule, not a
+// panel. A surface here would box the hero the environment is meant to
+// stay open.
 .project-hero__cue {
   display: inline-flex;
-  gap: 0.75rem;
+  gap: 0.6rem;
   align-items: center;
+  align-self: flex-start;
   margin-top: 3rem;
-  padding: 0.7rem 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid currentColor;
   color: $color-text-primary;
-  background: var(--color-bg-glass);
-  border: 1px solid var(--color-border-glass);
-  border-radius: var(--radius-control);
-  box-shadow: var(--shadow-card);
-  backdrop-filter: var(--surface-filter);
-  -webkit-backdrop-filter: var(--surface-filter);
   font-size: $fs-sm;
   font-weight: $fw-medium;
   text-decoration: none;
-  transition:
-    background 220ms ease,
-    border-color 220ms ease,
-    transform 220ms ease,
-    box-shadow 220ms ease;
+  text-shadow: var(--shadow-hero-tagline);
+  transition: color 180ms ease, opacity 180ms ease;
 
   &:hover {
-    color: $color-text-primary;
-    background: var(--color-bg-glass-hover);
-    border-color: var(--color-border-accent-hover);
-    box-shadow: var(--shadow-card-hover);
-    transform: translateY(-2px);
+    opacity: 0.72;
   }
 
   &:focus-visible {
@@ -103,7 +95,7 @@
   scroll-margin-top: 6rem;
   margin-bottom: 3rem;
   padding: clamp(1.5rem, 4vw, 3rem);
-  background: var(--color-bg-glass);
+  background: var(--color-reading-surface);
   border: 1px solid var(--color-border-glass);
   border-radius: var(--radius-atmosphere);
   box-shadow: var(--shadow-card);
@@ -174,7 +166,7 @@
 }
 
 .project-panel__intro {
-  max-width: 42rem;
+  max-width: 100%;
   margin: 0 0 1.75rem;
   color: $color-text-secondary;
   font-size: $fs-base;
@@ -183,57 +175,59 @@
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   align-items: start;
 }
 
+// Repeated items are Trace rows inside the single Atmospheric plane,
+// not nested Item planes.
 .project-entry {
   min-width: 0;
-  min-height: 16rem;
-  padding: 1.25rem;
+  min-height: 0;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
-  background: var(--color-panel-inner);
-  border: 1px solid var(--color-separator);
-  border-radius: var(--radius-panel);
-  box-shadow: var(--shadow-panel);
-  transition:
-    background 220ms ease,
-    border-color 220ms ease,
-    transform 220ms ease,
-    box-shadow 220ms ease;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--color-separator);
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.project-entry--completed {
-  &:hover,
-  &:focus-within {
-    background: var(--color-bg-glass-hover);
-    border-color: $color-primary-blue;
-    box-shadow: var(--shadow-card-hover);
-    transform: translateY(-3px);
-  }
+.project-entry:last-child {
+  border-bottom: 1px solid var(--color-separator);
 }
 
-.project-entry__meta {
+.project-entry__row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: nowrap;
+  align-items: baseline;
   gap: 1rem;
-  min-height: 1.5rem;
+}
+
+.project-entry__index {
+  flex: 0 0 auto;
   color: $color-text-tertiary;
   font-family: $font-monospace;
   font-size: $fs-xs;
   font-weight: $fw-medium;
   letter-spacing: 0.07em;
-  text-transform: uppercase;
 }
 
 .project-entry__status {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  flex: 0 0 auto;
+  margin-left: auto;
+  white-space: nowrap;
   color: $color-text-secondary;
+  font-family: $font-monospace;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 
   &::before {
     content: '';
@@ -258,31 +252,73 @@
 }
 
 .project-entry__title {
-  margin-top: 1.25rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
   font-size: $fs-project-heading;
   font-weight: $fw-semibold;
   line-height: 1.15;
   letter-spacing: -0.03em;
 }
 
+.project-entry__title-link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease;
+
+  &:hover {
+    color: $color-primary-blue-light;
+  }
+
+  &:hover .project-entry__arrow {
+    transform: translate(2px, -2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary-blue-light;
+    outline-offset: 3px;
+    box-shadow: var(--shadow-focus-ring);
+  }
+}
+
+// A long title truncates rather than pushing the status Point off the row.
+.project-entry__title-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-entry__title > .project-entry__title-text {
+  display: block;
+}
+
+.project-entry__arrow {
+  flex: 0 0 auto;
+  display: inline-block;
+  font-size: $fs-base;
+  font-weight: $fw-regular;
+  transition: transform 180ms ease;
+}
+
 .project-entry__description {
-  max-width: 42rem;
+  max-width: 100%;
   margin: 0.75rem 0 0;
   color: $color-text-secondary;
   font-size: $fs-base;
   line-height: 1.55;
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
 }
 
 .project-entry__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 1.25rem;
-  margin-top: auto;
-  padding-top: 1.25rem;
+  margin-top: 1rem;
+  padding-top: 0;
   color: $color-text-tertiary;
   font-size: $fs-sm;
 
@@ -295,30 +331,6 @@
     position: absolute;
     left: calc(100% + 0.5rem);
     color: var(--color-separator);
-  }
-}
-
-.project-entry__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: fit-content;
-  margin-top: 1rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid currentColor;
-  color: $color-text-primary;
-  font-size: $fs-sm;
-  font-weight: $fw-medium;
-  text-transform: lowercase;
-
-  &:hover {
-    color: $color-primary-blue-light;
-  }
-
-  &:focus-visible {
-    outline: 2px solid $color-primary-blue-light;
-    outline-offset: 3px;
-    box-shadow: var(--shadow-focus-ring);
   }
 }
 
@@ -344,6 +356,8 @@
 
   .project-index {
     padding: 1.5rem;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .project-tabs {
@@ -351,7 +365,10 @@
   }
 
   .project-tab {
+    flex: 1 1 0;
+    min-width: 0;
     font-size: $fs-base;
+    line-height: 1.25;
   }
 
   .project-panel {
@@ -402,13 +419,20 @@
 
 @media (prefers-reduced-motion: reduce) {
   .project-hero__cue,
-  .project-entry {
+  .project-entry__arrow {
     transition: none;
   }
 
   .project-hero__cue:hover,
-  .project-entry--completed:hover,
-  .project-entry--completed:focus-within {
+  .project-entry__title-link:hover .project-entry__arrow {
     transform: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .project-index {
+    background: var(--bg-color-page);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 }

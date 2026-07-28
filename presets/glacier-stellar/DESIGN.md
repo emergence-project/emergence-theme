@@ -5,6 +5,8 @@
 이 프리셋은 빙하와 우주 사진을 장식 배경이 아니라 **공간을 정의하는 주 시각
 자산**으로 사용한다. 라이트 모드는 Glacier, 다크 모드는 Galaxy이며,
 각 환경의 빛과 밀도에서 표면·명암·타이포그래피·상호작용 규칙을 도출한다.
+사진은 프리셋의 정체성을 담당하지만, 실제 읽기 구간에서는 저채도 중립 표면과
+Trace 중심 구조를 사용해 콘텐츠가 항상 먼저 보이게 한다.
 
 과거 브랜치 `orginal-emergence-deep-glacier-stellar-blue`의 이미지와
 `emergence.` 중심 구성을 계승하되, 현재 템플릿의 Projects, Notes, Readings,
@@ -15,8 +17,8 @@ About 정보 구조와 콘텐츠 계약을 유지한다. 프리셋은 neutral �
 
 | 환경 | 사진에서 가져온 성질 | 시스템 표현 |
 |---|---|---|
-| Glacier | 넓은 수평선, 확산광, 차가운 공기, 낮은 대비 | 밝고 투명한 ice surface, 깊은 navy 본문, 부드러운 청색 경계와 넓은 그림자 |
-| Galaxy | 고밀도 별빛, 심우주의 깊이, cyan 점광원 | 짙은 indigo glass, 청백색 본문, cyan edge와 제한된 항성 glow |
+| Glacier | 넓은 수평선, 확산광, 차가운 공기, 낮은 대비 | near-white reading surface, charcoal 본문, 낮은 채도의 blue-grey accent |
+| Galaxy | 고밀도 별빛, 심우주의 깊이, 차가운 점광원 | near-black reading surface, off-white 본문, 낮은 채도의 ice-blue accent |
 
 두 환경은 같은 정보 구조와 컴포넌트를 공유하지만 동일한 색상 반전으로 취급하지
 않는다. 투명도, 그림자, 테두리, 이미지 크롭은 각 사진에 맞게 독립적으로 조정한다.
@@ -26,9 +28,9 @@ About 정보 구조와 콘텐츠 계약을 유지한다. 프리셋은 neutral �
 이 시스템은 glassmorphism에서 출발하지 않는다. 빙하와 우주가 만드는 환경을 먼저
 두고, 그 환경을 가리지 않으면서 탐색하고 읽기 위한 최소한의 인터페이스를 만든다.
 
-> **Landscape first, instruments second, content third.**
-> 사진은 환경이고, 인터페이스는 환경을 관측하는 장치이며, 콘텐츠 표면은 그 안에서
-> 읽는 기록물이다.
+> **Landscape for identity, content for attention.**
+> 사진은 환경이고, 인터페이스는 환경을 관측하는 장치다. 히어로를 지난 뒤에는
+> 표면과 색이 물러나고 콘텐츠가 시선의 중심이 된다.
 
 모든 시각 요소는 `Field`, `Plane`, `Trace`, `Point` 중 하나의 역할을 가져야 한다.
 어느 역할에도 속하지 않는 형태는 장식으로 간주하고 추가하지 않는다.
@@ -68,22 +70,24 @@ Field 위에 직접 놓을 수 있는 요소는 큰 워드마크, 짧은 환경 
 
 | 계층 | 역할 | 기본 형태 |
 |---|---|---|
-| Atmospheric plane | 프로젝트 인덱스 등 환경 탐색을 위한 주요 영역 | 18–22px 반경, 중간 투명도 |
-| Reading plane | 긴 프로젝트 본문 | 18–22px 반경, 가장 높은 가독성 |
-| Instrument panel | TOC, 필터, 보조 탐색 | 10–14px 반경, 주요 영역보다 낮은 위계 |
-| Item plane | 독립적으로 선택 가능한 프로젝트나 관련 항목 | 10–14px 반경 |
-| Compact control | 하나의 짧은 행동을 수행하는 버튼 | 내용 길이에 맞춘 capsule 허용 |
+| Atmospheric plane | 프로젝트 인덱스 등 환경 탐색을 위한 주요 영역 | 6px 반경, 높은 읽기 대비 |
+| Reading plane | 긴 프로젝트 본문 | 6px 반경, 가장 높은 가독성 |
+| Instrument panel | TOC, 필터, 보조 탐색 | 4px 반경, 주요 영역보다 낮은 위계 |
+| Item plane | 별도 표면이 꼭 필요한 독립 도구 | 4px 반경, 예외적으로만 사용 |
+| Compact control | 하나의 짧은 행동을 수행하는 버튼 | 2px 또는 Point; capsule은 사용하지 않음 |
 
-Plane 중첩은 다음 세 단계까지만 허용한다.
+Plane은 기본적으로 한 단계만 사용한다. 기능상 필요한 Instrument만 한 단계 더
+허용하며, 프로젝트·노트·리딩처럼 반복되는 항목은 Plane 대신 Trace 행으로
+표현한다.
 
 ```text
 Field
 └── Atmospheric 또는 Reading plane
-    └── Instrument 또는 Item plane
+    └── 필요한 경우에만 Instrument panel
 ```
 
-세 번째 박스 계층이 필요해 보인다면 먼저 여백, 타이포그래피, Trace로 해결할 수
-있는지 검토한다.
+반복 항목이나 세 번째 박스 계층이 필요해 보인다면 먼저 여백, 타이포그래피,
+Trace로 해결한다.
 
 ### 3. Trace — 빙하의 수평선
 
@@ -104,8 +108,8 @@ Trace는 다음 요소에 사용한다.
 - 선은 정보를 구분하거나 현재 위치를 표시할 때만 사용한다.
 - 단순 장식용 선을 추가하지 않는다.
 - 활성 Trace는 텍스트 전체를 장식하기보다 선택된 영역의 축을 명확히 보여준다.
-- Glacier에서는 낮은 대비의 navy-blue Trace를 사용한다.
-- Galaxy에서는 cyan Trace를 사용할 수 있지만 glow는 활성 상태에만 허용한다.
+- Glacier에서는 낮은 대비의 blue-grey Trace를 사용한다.
+- Galaxy에서도 Trace는 대부분 중립색을 사용하고, 활성 위치만 ice-blue로 표시한다.
 
 ### 4. Point — 별과 환경 제어 장치
 
@@ -124,9 +128,12 @@ Point는 다음 요소에만 사용한다.
 
 - 원형은 하나의 상태나 행동을 나타낼 때만 사용한다.
 - 여러 항목을 담는 구조적 컨테이너를 원형이나 capsule로 만들지 않는다.
-- Galaxy의 glow는 활성 Point, focus, 핵심 accent로 제한한다.
-- Glacier에서는 강한 glow 대신 밝은 테두리와 넓고 낮은 확산 그림자를 사용한다.
+- Galaxy의 glow는 `emergence.`의 마침표처럼 정체성을 나타내는 핵심 Point
+  한 곳에만 허용한다.
+- Glacier에서는 glow를 사용하지 않고 얇은 경계와 낮은 확산 그림자를 사용한다.
 - 상태를 색상만으로 전달하지 않고 텍스트나 아이콘을 함께 제공한다.
+- 프로젝트 상태색은 의미 구분을 위한 저채도 예외이며, 일반 링크나 장식에는
+  재사용하지 않는다.
 
 ## 형태 선택 규칙
 
@@ -135,27 +142,27 @@ Point는 다음 요소에만 사용한다.
 | 요소 | 형태 문법 | 도출되는 형태 |
 |---|---|---|
 | 홈페이지 히어로 | Field | 박스 없는 열린 구성 |
-| 상단 내비게이션 | Plane + Trace | 낮고 긴 Horizon Rail |
+| 상단 내비게이션 | Plane + Trace | 화면 폭 전체의 플러시 Horizon Rail (반경 없음) |
 | 테마 전환 | Point | 원형 환경 제어 장치 |
 | 프로젝트 인덱스 | Atmospheric plane | 하나의 넓은 반투명 표면 |
-| 프로젝트 카드 | Item plane | 독립 항목일 때만 작은 표면 |
+| 프로젝트 목록 | Trace | 하나의 Plane 안에서 1px rule로 나뉜 행 |
 | 프로젝트 탭 | Trace | 텍스트와 수평 활성선 |
 | Notes 인덱스 | Atmospheric plane + Trace | 하나의 표면 안에서 행 단위로 구분된 기록 목록 |
 | Readings 인덱스 | Reading plane + Trace | 하나의 표면 안에서 행 단위로 구분된 읽기 목록 |
 | About | Reading plane | 하나의 연속된 읽기 표면 |
 | 프로젝트 본문 | Reading plane | 대비가 높은 장문 표면 |
 | TOC | Instrument panel | 본문에 종속된 보조 표면 |
-| `explore projects` | Compact control | 짧은 capsule 제어 |
+| `explore the system` | Trace | 텍스트와 얇은 하단선으로 된 단일 cue |
 
 ### 반경 규칙
 
 반경은 장식 강도가 아니라 요소의 역할을 나타낸다.
 
-- `radius-atmosphere`: 18–22px (기본값 20px)
+- `radius-atmosphere`: 기본값 6px
   페이지의 주요 Atmospheric 또는 Reading plane에만 사용한다.
-- `radius-panel`: 10–14px (기본값 12px)
-  Item plane과 Instrument panel에 사용한다.
-- `radius-control`: full 또는 capsule
+- `radius-panel`: 기본값 4px
+  기능적으로 독립된 Instrument panel에 사용한다.
+- `radius-control`: 기본값 2px
   하나의 짧은 행동을 수행하는 compact control에만 사용한다.
 - `radius-point`: 50%
   상태와 단일 환경 제어에만 사용한다.
@@ -173,10 +180,10 @@ Rail**이다. 사용자가 환경 속에서 현재 위치를 확인하고 다른
 
 ### 형태
 
-- 콘텐츠 축과 정렬된 낮고 긴 수평 Plane을 사용한다.
-- 완전한 capsule보다 `radius-panel`의 부드러운 직사각형을 사용한다.
+- 뷰포트 좌우 끝까지 붙는 화면 폭 전체의 낮은 Plane을 사용한다 (`border-radius: 0`).
+- 콘텐츠 축과 정렬된 좌우 padding만 두고, 별도의 여백이나 캡슐 형태로 띄우지 않는다.
 - 높이와 시각적 무게를 최소화해 사진과 히어로보다 앞서 보이지 않게 한다.
-- 테두리는 Horizon Trace 역할을 하며, 별도의 장식선을 중복해서 사용하지 않는다.
+- 하단 1px 테두리가 Horizon Trace 역할을 하며, 별도의 장식선을 중복해서 사용하지 않는다.
 
 ### 상태
 
@@ -238,20 +245,20 @@ Glacier와 Galaxy는 동일한 구조와 형태 문법을 공유한다. 테마�
 
 ### Glacier
 
-- 밝고 투명한 ice surface
-- 깊은 navy 텍스트
-- 넓고 낮은 청색 그림자
-- 흰색에 가까운 내부 반사광
-- 제한된 glow
+- near-white에 가까운 높은 대비의 reading surface
+- charcoal 텍스트
+- 작고 낮은 중립 그림자
+- 낮은 채도의 blue-grey accent 한 색
+- glow 없음
 - 수평선과 넓은 여백을 강조
 
 ### Galaxy
 
-- 짙은 indigo glass
-- 청백색 텍스트
-- cyan edge와 활성 Trace
-- Point에 제한된 starlight glow
-- 더 깊은 그림자와 높은 읽기 표면 대비
+- near-black reading surface
+- off-white 텍스트
+- 저채도 ice-blue 활성 Trace
+- `emergence.`의 마침표에만 허용되는 약한 starlight glow
+- 작고 낮은 그림자와 높은 읽기 표면 대비
 - 별과 은하수의 밀도를 가리지 않는 투명도
 
 ## 상호작용과 움직임
@@ -259,12 +266,14 @@ Glacier와 Galaxy는 동일한 구조와 형태 문법을 공유한다. 테마�
 움직임은 표면의 물리적 깊이를 설명해야 하며 주의를 끌기 위한 장식으로 사용하지
 않는다.
 
-- Item plane과 compact control의 상승 이동은 2–3px 이내로 제한한다.
+- 반복 항목과 compact control은 상승 이동을 사용하지 않는다.
 - Atmospheric plane, Reading plane, Horizon Rail은 hover로 이동하지 않는다.
-- 고정된 구조는 경계색, 투명도, 그림자 변화로만 반응한다.
+- 고정된 구조는 텍스트와 경계색 변화로만 반응한다.
 - transition은 기본 180–220ms 범위에서 사용한다.
 - 첫 화면에서 사진이 즉시 드러나도록 page-load fade는 사용하지 않는다.
 - `prefers-reduced-motion`에서는 모든 위치 이동을 제거한다.
+- `prefers-reduced-transparency`에서는 표면 blur를 제거하고 현재 테마의 읽기
+  대비를 유지한다.
 - 키보드 focus는 hover보다 명확하고 두 테마에서 동일한 의미를 가져야 한다.
 
 ## 금지되는 패턴
@@ -301,8 +310,8 @@ Glacier와 Galaxy는 동일한 구조와 형태 문법을 공유한다. 테마�
    사용한다. glass는 사진을 숨기는 불투명 카드가 아니라 읽을 수 있게 굴절시키는
    매개다.
 4. **Content** — 프로젝트, 본문, 상태 정보는 환경 위에서도 명확한 위계를 유지한다.
-5. **Light signature** — Glacier에는 흰 확산광, Galaxy에는 cyan glow를 제한적으로
-   사용한다. 모든 요소를 빛나게 만들지 않는다.
+5. **Light signature** — 저채도 accent는 활성 위치와 핵심 Point에만 사용한다.
+   반복 항목과 일반 본문에는 glow를 사용하지 않는다.
 
 ## 레이아웃
 
@@ -312,7 +321,9 @@ Glacier와 Galaxy는 동일한 구조와 형태 문법을 공유한다. 테마�
 - 짧은 연구 태그라인과 프로젝트로 내려가는 단일 cue만 함께 둔다.
 - 프로젝트 목록은 첫 환경 장면 아래 하나의 큰 atmospheric surface 안에 배치한다.
 - `research`와 `systems` 탭, 프로젝트 상태, 링크 동작은 기존 계약을 유지한다.
-- 하나의 프로젝트 Item plane에는 하나의 주 이동 링크만 둔다.
+- 프로젝트는 중첩 카드가 아니라 1열 Trace 행으로 표시하며 하나의 주 이동 링크만
+  둔다. 이동 링크는 제목 자체에 걸고 별도의 `view project` 버튼을 만들지 않는다.
+- 긴 제목은 줄바꿈해서 상태 Point를 밀어내지 않고 말줄임으로 처리한다.
 
 ### 컬렉션 인덱스, About, 본문
 
@@ -328,7 +339,9 @@ Glacier와 Galaxy는 동일한 구조와 형태 문법을 공유한다. 테마�
 
 ## 타이포그래피
 
-- 기본 글꼴은 SF Pro 계열 시스템 스택이다.
+- 기본 글꼴은 Inter이며, 환경 라벨·태그·모노스페이스 요소에는 JetBrains Mono를
+  사용한다. 두 글꼴은 `_layouts/base.html`에서 Google Fonts로 불러오고,
+  시스템 스택을 fallback으로 유지한다.
 - `emergence.`와 페이지 타이틀은 Thin/Light를 사용해 사진의 넓은 공간과 호흡한다.
 - 프로젝트 제목과 본문 위계는 Semibold/Regular로 읽기 성능을 유지한다.
 - 환경 라벨과 태그라인에만 모노스페이스와 넓은 자간을 제한적으로 사용한다.
@@ -337,12 +350,13 @@ Glacier와 Galaxy는 동일한 구조와 형태 문법을 공유한다. 테마�
 
 ## 표면과 상호작용
 
-- 큰 reading surface는 20px, 내부 panel은 12px 반경을 기본으로 한다.
-- hover는 2–3px의 작은 상승, 경계색 변화, 환경별 그림자만 사용한다.
-- Galaxy glow는 dot, 활성 경계, focus처럼 의미가 있는 지점에 한정한다.
-- Glacier는 glow보다 넓고 낮은 청색 그림자를 사용한다.
+- 큰 reading surface는 6px, 기능적 내부 panel은 4px 반경을 기본으로 한다.
+- hover는 위치 이동이나 glow 없이 텍스트와 경계색만 바꾼다.
+- Galaxy glow는 `emergence.`의 마침표처럼 정체성을 나타내는 핵심 Point
+  한 곳에만 사용한다.
+- Glacier는 glow 없이 작고 낮은 중립 그림자를 사용한다.
 - 키보드 focus는 배경과 관계없이 식별 가능한 외곽선을 제공한다.
-- `prefers-reduced-motion`에서는 상승 이동을 제거한다.
+- `prefers-reduced-motion`에서도 레이아웃은 정적으로 유지된다.
 
 ## 이미지와 크롭
 
@@ -401,7 +415,7 @@ Notes와 Readings는 각각 `site.notes`, `site.readings` 컬렉션과 `subcateg
 ## 오픈소스 템플릿 경계
 
 `emergence-theme`의 루트는 neutral flat editorial 시스템을 기본값으로 유지한다.
-이 디렉터리는 이미지, 92개 환경 토큰, Sass, 레이아웃, include, 컬렉션 인덱스를 함께
+이 디렉터리는 이미지, 93개 환경 토큰, Sass, 레이아웃, include, 컬렉션 인덱스를 함께
 제공하는 선택형 `glacier-stellar` 프리셋이다. 설치 후에도 라이트/다크 전환은
 Glacier와 Galaxy 사이의 유일한 런타임 환경 제어이며, 프리셋 자체를
 선택하는 별도 런타임 UI는 만들지 않는다.

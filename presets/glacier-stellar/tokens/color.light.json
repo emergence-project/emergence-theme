@@ -1,190 +1,190 @@
 {
   "color": {
     "accent": {
-      "value": "#0D5F9A"
+      "value": "#315E74"
     },
     "accent-light": {
-      "value": "#177CB8"
+      "value": "#466F83"
     },
     "accent-dark": {
-      "value": "#08466F"
+      "value": "#24485B"
     },
     "text-primary": {
-      "value": "#071426"
+      "value": "#18222B"
     },
     "text-secondary": {
-      "value": "rgba(7, 20, 38, 0.74)"
+      "value": "rgba(24, 34, 43, 0.74)"
     },
     "text-tertiary": {
-      "value": "rgba(7, 20, 38, 0.62)"
+      "value": "rgba(24, 34, 43, 0.66)"
     },
     "bg-body": {
-      "value": "#DCECF5"
+      "value": "#DDE6E9"
     },
     "bg-glass": {
-      "value": "rgba(242, 249, 253, 0.70)"
+      "value": "rgba(249, 251, 251, 0.96)"
     },
     "bg-glass-hover": {
-      "value": "rgba(248, 252, 255, 0.86)"
+      "value": "rgba(250, 252, 252, 0.99)"
     },
     "bg-nav": {
-      "value": "rgba(237, 247, 252, 0.58)"
+      "value": "rgba(248, 250, 250, 0.78)"
     },
     "bg-nav-hero": {
-      "value": "rgba(237, 247, 252, 0.20)"
+      "value": "rgba(248, 250, 250, 0.22)"
     },
     "bg-overlay": {
-      "value": "rgba(225, 240, 248, 0.22)"
+      "value": "rgba(232, 239, 241, 0.18)"
     },
     "bg-nav-shadow": {
-      "value": "0 12px 40px rgba(19, 70, 108, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.74)"
+      "value": "0 8px 28px rgba(31, 55, 67, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.62)"
     },
     "bg-nav-hero-shadow": {
-      "value": "0 6px 20px rgba(19, 70, 108, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.42)"
+      "value": "0 4px 18px rgba(31, 55, 67, 0.04)"
     },
     "panel-inner": {
-      "value": "rgba(247, 252, 255, 0.54)"
+      "value": "rgba(255, 255, 255, 0.44)"
     },
     "reading-surface": {
-      "value": "rgba(245, 251, 254, 0.90)"
+      "value": "rgba(250, 251, 251, 0.99)"
     },
     "sidebar-surface": {
-      "value": "rgba(245, 251, 254, 0.82)"
+      "value": "rgba(250, 251, 251, 0.97)"
     },
     "border-glass": {
-      "value": "rgba(22, 83, 126, 0.24)"
+      "value": "rgba(24, 52, 66, 0.16)"
     },
     "border-glass-hover": {
-      "value": "rgba(13, 95, 154, 0.54)"
+      "value": "rgba(49, 94, 116, 0.34)"
     },
     "border-accent": {
-      "value": "rgba(13, 95, 154, 0.48)"
+      "value": "rgba(49, 94, 116, 0.34)"
     },
     "border-accent-hover": {
-      "value": "#0D5F9A"
+      "value": "#315E74"
     },
     "tag-bg": {
-      "value": "rgba(13, 95, 154, 0.08)"
+      "value": "transparent"
     },
     "tag-border": {
-      "value": "rgba(13, 95, 154, 0.24)"
+      "value": "rgba(24, 52, 66, 0.18)"
     },
     "tag-text": {
-      "value": "rgba(7, 20, 38, 0.76)"
+      "value": "rgba(24, 34, 43, 0.68)"
     },
     "btn-bg": {
-      "value": "rgba(13, 95, 154, 0.08)"
+      "value": "transparent"
     },
     "btn-bg-hover": {
-      "value": "rgba(13, 95, 154, 0.15)"
+      "value": "rgba(49, 94, 116, 0.07)"
     },
     "btn-primary-bg": {
-      "value": "rgba(13, 95, 154, 0.13)"
+      "value": "rgba(49, 94, 116, 0.09)"
     },
     "code-bg": {
-      "value": "rgba(225, 240, 248, 0.78)"
+      "value": "rgba(226, 234, 237, 0.72)"
     },
     "code-border": {
-      "value": "rgba(13, 95, 154, 0.20)"
+      "value": "rgba(24, 52, 66, 0.16)"
     },
     "code-text": {
-      "value": "#08466F"
+      "value": "#24485B"
     },
     "pre-bg": {
-      "value": "rgba(231, 244, 251, 0.92)"
+      "value": "rgba(241, 245, 246, 0.94)"
     },
     "project-gradient-1": {
-      "value": "rgba(98, 178, 218, 0.18)"
+      "value": "rgba(70, 111, 131, 0.08)"
     },
     "project-gradient-2": {
-      "value": "rgba(103, 137, 203, 0.14)"
+      "value": "rgba(80, 96, 118, 0.06)"
     },
     "project-gradient-h1": {
-      "value": "rgba(72, 158, 204, 0.26)"
+      "value": "rgba(70, 111, 131, 0.12)"
     },
     "project-gradient-h2": {
-      "value": "rgba(77, 111, 188, 0.22)"
+      "value": "rgba(80, 96, 118, 0.10)"
     },
     "project-icon": {
-      "value": "rgba(7, 20, 38, 0.26)"
+      "value": "rgba(24, 34, 43, 0.20)"
     },
     "filter-bg": {
-      "value": "rgba(13, 95, 154, 0.08)"
+      "value": "rgba(49, 94, 116, 0.05)"
     },
     "accent-bg-subtle": {
-      "value": "rgba(13, 95, 154, 0.07)"
+      "value": "rgba(49, 94, 116, 0.05)"
     },
     "accent-bg-light": {
-      "value": "rgba(13, 95, 154, 0.12)"
+      "value": "rgba(49, 94, 116, 0.08)"
     },
     "accent-bg-medium": {
-      "value": "rgba(13, 95, 154, 0.20)"
+      "value": "rgba(49, 94, 116, 0.12)"
     },
     "accent-glow": {
-      "value": "rgba(13, 95, 154, 0.24)"
+      "value": "rgba(49, 94, 116, 0.14)"
     },
     "accent-glow-strong": {
-      "value": "rgba(13, 95, 154, 0.40)"
+      "value": "rgba(49, 94, 116, 0.22)"
     },
     "nav-border": {
-      "value": "rgba(22, 83, 126, 0.20)"
+      "value": "rgba(24, 52, 66, 0.14)"
     },
     "nav-border-hero": {
-      "value": "rgba(22, 83, 126, 0.13)"
+      "value": "rgba(24, 52, 66, 0.10)"
     },
     "footer-border": {
-      "value": "rgba(7, 20, 38, 0.14)"
+      "value": "rgba(24, 34, 43, 0.12)"
     },
     "social-bg": {
-      "value": "rgba(13, 95, 154, 0.07)"
+      "value": "transparent"
     },
     "social-bg-hover": {
-      "value": "rgba(13, 95, 154, 0.14)"
+      "value": "rgba(49, 94, 116, 0.07)"
     },
     "separator": {
-      "value": "rgba(7, 20, 38, 0.18)"
+      "value": "rgba(24, 52, 66, 0.16)"
     },
     "table-header-bg": {
-      "value": "rgba(13, 95, 154, 0.10)"
+      "value": "rgba(49, 94, 116, 0.06)"
     },
     "select-option-bg": {
-      "value": "#EAF5FA"
+      "value": "#F1F5F6"
     },
     "tag-btn-text": {
-      "value": "rgba(7, 20, 38, 0.78)"
+      "value": "rgba(24, 34, 43, 0.72)"
     },
     "tag-btn-border": {
-      "value": "rgba(13, 95, 154, 0.26)"
+      "value": "rgba(24, 52, 66, 0.18)"
     },
     "hero-tagline": {
-      "value": "rgba(7, 20, 38, 0.82)"
+      "value": "rgba(24, 34, 43, 0.82)"
     },
     "status-completed": {
-      "value": "#0D5F9A"
+      "value": "#315E74"
     },
     "status-completed-bg": {
-      "value": "rgba(13, 95, 154, 0.10)"
+      "value": "rgba(49, 94, 116, 0.07)"
     },
     "status-completed-bd": {
-      "value": "rgba(13, 95, 154, 0.36)"
+      "value": "rgba(49, 94, 116, 0.26)"
     },
     "status-progress": {
-      "value": "#835A08"
+      "value": "#6D5C35"
     },
     "status-progress-bg": {
-      "value": "rgba(131, 90, 8, 0.10)"
+      "value": "rgba(109, 92, 53, 0.07)"
     },
     "status-progress-bd": {
-      "value": "rgba(131, 90, 8, 0.34)"
+      "value": "rgba(109, 92, 53, 0.24)"
     },
     "status-planned": {
-      "value": "#4B6077"
+      "value": "#66717C"
     },
     "status-planned-bg": {
-      "value": "rgba(75, 96, 119, 0.09)"
+      "value": "rgba(102, 113, 124, 0.06)"
     },
     "status-planned-bd": {
-      "value": "rgba(75, 96, 119, 0.30)"
+      "value": "rgba(102, 113, 124, 0.22)"
     }
   },
   "shadow": {
@@ -192,46 +192,46 @@
       "value": "none"
     },
     "toggle-hover": {
-      "value": "0 6px 22px rgba(13, 95, 154, 0.20)"
+      "value": "none"
     },
     "card": {
-      "value": "0 24px 70px rgba(19, 70, 108, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.82)"
+      "value": "none"
     },
     "card-hover": {
-      "value": "0 30px 84px rgba(19, 70, 108, 0.22), 0 0 26px rgba(92, 177, 220, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.90)"
+      "value": "none"
     },
     "panel": {
-      "value": "0 12px 36px rgba(19, 70, 108, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.70)"
+      "value": "none"
     },
     "glow-primary": {
-      "value": "0 0 30px rgba(137, 222, 247, 0.62)"
+      "value": "none"
     },
     "glow-secondary": {
-      "value": "0 0 60px rgba(255, 255, 255, 0.42)"
+      "value": "none"
     },
     "text": {
-      "value": "0 2px 18px rgba(240, 249, 253, 0.76)"
+      "value": "0 1px 10px rgba(255, 255, 255, 0.78)"
     },
     "focus-ring": {
-      "value": "0 0 0 3px rgba(13, 95, 154, 0.22)"
+      "value": "0 0 0 3px rgba(49, 94, 116, 0.22)"
     },
     "status-point": {
-      "value": "0 2px 8px rgba(19, 70, 108, 0.16)"
+      "value": "none"
     },
     "btn-glow": {
-      "value": "0 6px 22px rgba(13, 95, 154, 0.18)"
+      "value": "none"
     },
     "filter-active": {
-      "value": "0 8px 28px rgba(13, 95, 154, 0.18)"
+      "value": "none"
     },
     "tag-hover": {
-      "value": "0 4px 16px rgba(13, 95, 154, 0.16)"
+      "value": "none"
     },
     "tag-active": {
-      "value": "0 5px 20px rgba(13, 95, 154, 0.22)"
+      "value": "none"
     },
     "hero-tagline": {
-      "value": "0 2px 14px rgba(240, 249, 253, 0.82)"
+      "value": "0 1px 10px rgba(255, 255, 255, 0.82)"
     }
   },
   "bg": {
@@ -242,7 +242,7 @@
       "value": "image-set(url('../img/common/bg-light-1920.avif') type('image/avif') 1x, url('../img/common/bg-light-3840.avif') type('image/avif') 2x, url('../img/common/bg-light-1920.webp') type('image/webp') 1x, url('../img/common/bg-light-3840.webp') type('image/webp') 2x)"
     },
     "color-page": {
-      "value": "#DCECF5"
+      "value": "#DDE6E9"
     },
     "position": {
       "value": "center center"
@@ -254,38 +254,34 @@
       "value": "block"
     },
     "overlay": {
-      "value": "rgba(225, 240, 248, 0.22)"
+      "value": "rgba(232, 239, 241, 0.18)"
     },
     "overlay-page": {
-      "value": "linear-gradient(180deg, rgba(238, 248, 252, 0.03) 0%, rgba(235, 246, 252, 0.14) 42%, rgba(235, 246, 252, 0.72) 100%)"
+      "value": "linear-gradient(180deg, rgba(247, 250, 250, 0.02) 0%, rgba(239, 244, 245, 0.12) 42%, rgba(235, 240, 241, 0.68) 100%)"
     },
     "overlay-page-opacity": {
       "value": "1"
     }
   },
-  "surface": {
-    "filter": {
-      "value": "blur(20px) saturate(1.12)"
-    },
-    "filter-nav": {
-      "value": "blur(24px) saturate(1.16)"
-    },
-    "filter-nav-hero": {
-      "value": "blur(10px) saturate(1.05)"
-    }
+  "surface-filter": {
+    "value": "blur(12px) saturate(0.90)"
   },
-  "radius": {
-    "atmosphere": {
-      "value": "20px"
-    },
-    "panel": {
-      "value": "12px"
-    },
-    "control": {
-      "value": "999px"
-    },
-    "point": {
-      "value": "50%"
-    }
+  "surface-filter-nav": {
+    "value": "blur(14px) saturate(0.92)"
+  },
+  "surface-filter-nav-hero": {
+    "value": "blur(5px) saturate(0.90)"
+  },
+  "radius-atmosphere": {
+    "value": "6px"
+  },
+  "radius-panel": {
+    "value": "4px"
+  },
+  "radius-control": {
+    "value": "2px"
+  },
+  "radius-point": {
+    "value": "50%"
   }
 }

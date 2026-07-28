@@ -4,10 +4,15 @@ This preset provides the image-led identity used by the repository's anonymous
 live demo and packages it for reuse with the Emergence content model.
 
 - **Glacier** uses the glacial landscape as its light environment, with
-  translucent ice surfaces, deep navy type, diffuse shadows, and soft blue
-  optical edges.
+  near-white reading surfaces, charcoal type, and a single low-saturation
+  blue-grey accent.
 - **Galaxy** uses the galaxy photograph as its dark environment, with
-  indigo glass, cool white type, cyan starlight, and restrained glow.
+  near-black reading surfaces, off-white type, and a restrained ice-blue accent.
+
+Photography carries the identity; reading surfaces stay flat and near-opaque so
+the content is what holds attention. Repeated items are separated by 1px rules
+instead of nested cards, radii are document-scale (6/4/2px), and glow is limited
+to the single identity Point.
 
 It is a complete installation-time design preset, not a color swap. It includes
 JPEG fallbacks with 1920px and 3840px AVIF/WebP delivery derivatives, 93

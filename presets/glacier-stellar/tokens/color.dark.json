@@ -1,190 +1,190 @@
 {
   "color": {
     "accent": {
-      "value": "#39C7F2"
+      "value": "#86AFC1"
     },
     "accent-light": {
-      "value": "#88E4FF"
+      "value": "#B1CDD8"
     },
     "accent-dark": {
-      "value": "#1595C3"
+      "value": "#628698"
     },
     "text-primary": {
-      "value": "#F1FAFF"
+      "value": "#EEF2F4"
     },
     "text-secondary": {
-      "value": "rgba(225, 242, 255, 0.78)"
+      "value": "rgba(238, 242, 244, 0.74)"
     },
     "text-tertiary": {
-      "value": "rgba(204, 226, 244, 0.58)"
+      "value": "rgba(238, 242, 244, 0.52)"
     },
     "bg-body": {
-      "value": "#02040C"
+      "value": "#05070B"
     },
     "bg-glass": {
-      "value": "rgba(4, 15, 38, 0.58)"
+      "value": "rgba(9, 13, 20, 0.95)"
     },
     "bg-glass-hover": {
-      "value": "rgba(7, 23, 50, 0.74)"
+      "value": "rgba(11, 16, 24, 0.98)"
     },
     "bg-nav": {
-      "value": "rgba(2, 9, 26, 0.52)"
+      "value": "rgba(8, 12, 18, 0.66)"
     },
     "bg-nav-hero": {
-      "value": "rgba(2, 9, 26, 0.10)"
+      "value": "rgba(5, 8, 13, 0.14)"
     },
     "bg-overlay": {
-      "value": "rgba(0, 4, 18, 0.34)"
+      "value": "rgba(4, 8, 14, 0.28)"
     },
     "bg-nav-shadow": {
-      "value": "0 12px 42px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06)"
+      "value": "0 8px 28px rgba(0, 0, 0, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.05)"
     },
     "bg-nav-hero-shadow": {
       "value": "none"
     },
     "panel-inner": {
-      "value": "rgba(4, 15, 38, 0.40)"
+      "value": "rgba(12, 17, 24, 0.52)"
     },
     "reading-surface": {
-      "value": "rgba(3, 13, 34, 0.86)"
+      "value": "rgba(8, 12, 18, 0.98)"
     },
     "sidebar-surface": {
-      "value": "rgba(3, 13, 34, 0.76)"
+      "value": "rgba(8, 12, 18, 0.96)"
     },
     "border-glass": {
-      "value": "rgba(156, 223, 255, 0.24)"
+      "value": "rgba(218, 230, 236, 0.16)"
     },
     "border-glass-hover": {
-      "value": "rgba(136, 228, 255, 0.60)"
+      "value": "rgba(177, 205, 216, 0.36)"
     },
     "border-accent": {
-      "value": "rgba(57, 199, 242, 0.58)"
+      "value": "rgba(134, 175, 193, 0.36)"
     },
     "border-accent-hover": {
-      "value": "#88E4FF"
+      "value": "#B1CDD8"
     },
     "tag-bg": {
-      "value": "rgba(57, 199, 242, 0.10)"
+      "value": "transparent"
     },
     "tag-border": {
-      "value": "rgba(136, 228, 255, 0.28)"
+      "value": "rgba(218, 230, 236, 0.18)"
     },
     "tag-text": {
-      "value": "rgba(225, 242, 255, 0.82)"
+      "value": "rgba(238, 242, 244, 0.68)"
     },
     "btn-bg": {
-      "value": "rgba(57, 199, 242, 0.10)"
+      "value": "transparent"
     },
     "btn-bg-hover": {
-      "value": "rgba(57, 199, 242, 0.18)"
+      "value": "rgba(134, 175, 193, 0.08)"
     },
     "btn-primary-bg": {
-      "value": "rgba(57, 199, 242, 0.16)"
+      "value": "rgba(134, 175, 193, 0.10)"
     },
     "code-bg": {
-      "value": "rgba(0, 8, 24, 0.72)"
+      "value": "rgba(4, 8, 13, 0.64)"
     },
     "code-border": {
-      "value": "rgba(136, 228, 255, 0.20)"
+      "value": "rgba(218, 230, 236, 0.16)"
     },
     "code-text": {
-      "value": "#88E4FF"
+      "value": "#B1CDD8"
     },
     "pre-bg": {
-      "value": "rgba(0, 5, 18, 0.82)"
+      "value": "rgba(4, 8, 13, 0.78)"
     },
     "project-gradient-1": {
-      "value": "rgba(20, 128, 196, 0.18)"
+      "value": "rgba(98, 134, 152, 0.10)"
     },
     "project-gradient-2": {
-      "value": "rgba(92, 73, 194, 0.16)"
+      "value": "rgba(100, 108, 132, 0.08)"
     },
     "project-gradient-h1": {
-      "value": "rgba(29, 159, 222, 0.26)"
+      "value": "rgba(98, 134, 152, 0.14)"
     },
     "project-gradient-h2": {
-      "value": "rgba(111, 92, 218, 0.24)"
+      "value": "rgba(100, 108, 132, 0.12)"
     },
     "project-icon": {
-      "value": "rgba(241, 250, 255, 0.28)"
+      "value": "rgba(238, 242, 244, 0.22)"
     },
     "filter-bg": {
-      "value": "rgba(57, 199, 242, 0.10)"
+      "value": "rgba(134, 175, 193, 0.06)"
     },
     "accent-bg-subtle": {
-      "value": "rgba(57, 199, 242, 0.08)"
+      "value": "rgba(134, 175, 193, 0.06)"
     },
     "accent-bg-light": {
-      "value": "rgba(57, 199, 242, 0.14)"
+      "value": "rgba(134, 175, 193, 0.09)"
     },
     "accent-bg-medium": {
-      "value": "rgba(57, 199, 242, 0.22)"
+      "value": "rgba(134, 175, 193, 0.14)"
     },
     "accent-glow": {
-      "value": "rgba(57, 199, 242, 0.34)"
+      "value": "rgba(134, 175, 193, 0.18)"
     },
     "accent-glow-strong": {
-      "value": "rgba(136, 228, 255, 0.54)"
+      "value": "rgba(177, 205, 216, 0.28)"
     },
     "nav-border": {
-      "value": "rgba(156, 223, 255, 0.20)"
+      "value": "rgba(218, 230, 236, 0.14)"
     },
     "nav-border-hero": {
-      "value": "rgba(156, 223, 255, 0.13)"
+      "value": "rgba(218, 230, 236, 0.10)"
     },
     "footer-border": {
-      "value": "rgba(225, 242, 255, 0.12)"
+      "value": "rgba(238, 242, 244, 0.12)"
     },
     "social-bg": {
-      "value": "rgba(57, 199, 242, 0.08)"
+      "value": "transparent"
     },
     "social-bg-hover": {
-      "value": "rgba(57, 199, 242, 0.16)"
+      "value": "rgba(134, 175, 193, 0.08)"
     },
     "separator": {
-      "value": "rgba(204, 226, 244, 0.20)"
+      "value": "rgba(218, 230, 236, 0.16)"
     },
     "table-header-bg": {
-      "value": "rgba(57, 199, 242, 0.12)"
+      "value": "rgba(134, 175, 193, 0.07)"
     },
     "select-option-bg": {
-      "value": "#06132A"
+      "value": "#0C1118"
     },
     "tag-btn-text": {
-      "value": "rgba(225, 242, 255, 0.88)"
+      "value": "rgba(238, 242, 244, 0.72)"
     },
     "tag-btn-border": {
-      "value": "rgba(136, 228, 255, 0.30)"
+      "value": "rgba(218, 230, 236, 0.18)"
     },
     "hero-tagline": {
-      "value": "rgba(235, 248, 255, 0.88)"
+      "value": "rgba(238, 242, 244, 0.86)"
     },
     "status-completed": {
-      "value": "#67E2FF"
+      "value": "#9ABBC8"
     },
     "status-completed-bg": {
-      "value": "rgba(103, 226, 255, 0.12)"
+      "value": "rgba(154, 187, 200, 0.08)"
     },
     "status-completed-bd": {
-      "value": "rgba(103, 226, 255, 0.42)"
+      "value": "rgba(154, 187, 200, 0.28)"
     },
     "status-progress": {
-      "value": "#FFD27A"
+      "value": "#C2AE82"
     },
     "status-progress-bg": {
-      "value": "rgba(255, 210, 122, 0.12)"
+      "value": "rgba(194, 174, 130, 0.08)"
     },
     "status-progress-bd": {
-      "value": "rgba(255, 210, 122, 0.38)"
+      "value": "rgba(194, 174, 130, 0.26)"
     },
     "status-planned": {
-      "value": "#B8C5D7"
+      "value": "#A2ABB5"
     },
     "status-planned-bg": {
-      "value": "rgba(184, 197, 215, 0.10)"
+      "value": "rgba(162, 171, 181, 0.07)"
     },
     "status-planned-bd": {
-      "value": "rgba(184, 197, 215, 0.32)"
+      "value": "rgba(162, 171, 181, 0.24)"
     }
   },
   "shadow": {
@@ -192,43 +192,43 @@
       "value": "none"
     },
     "toggle-hover": {
-      "value": "0 0 24px rgba(57, 199, 242, 0.28)"
+      "value": "none"
     },
     "card": {
-      "value": "0 24px 80px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.07)"
+      "value": "none"
     },
     "card-hover": {
-      "value": "0 28px 90px rgba(0, 0, 0, 0.44), 0 0 30px rgba(57, 199, 242, 0.11), inset 0 1px 0 rgba(255, 255, 255, 0.09)"
+      "value": "none"
     },
     "panel": {
-      "value": "0 12px 42px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.05)"
+      "value": "none"
     },
     "glow-primary": {
-      "value": "0 0 30px rgba(57, 199, 242, 0.70)"
+      "value": "0 0 14px rgba(134, 175, 193, 0.28)"
     },
     "glow-secondary": {
-      "value": "0 0 70px rgba(57, 199, 242, 0.30)"
+      "value": "none"
     },
     "text": {
-      "value": "0 3px 22px rgba(0, 0, 0, 0.62), 0 0 44px rgba(24, 133, 201, 0.20)"
+      "value": "0 2px 14px rgba(0, 0, 0, 0.65)"
     },
     "focus-ring": {
-      "value": "0 0 0 3px rgba(136, 228, 255, 0.28)"
+      "value": "0 0 0 3px rgba(177, 205, 216, 0.30)"
     },
     "status-point": {
-      "value": "0 0 12px currentColor"
+      "value": "none"
     },
     "btn-glow": {
-      "value": "0 0 20px rgba(57, 199, 242, 0.30)"
+      "value": "none"
     },
     "filter-active": {
-      "value": "0 0 24px rgba(57, 199, 242, 0.28)"
+      "value": "none"
     },
     "tag-hover": {
-      "value": "0 0 16px rgba(57, 199, 242, 0.30)"
+      "value": "none"
     },
     "tag-active": {
-      "value": "0 0 20px rgba(57, 199, 242, 0.42)"
+      "value": "none"
     },
     "hero-tagline": {
       "value": "0 2px 14px rgba(0, 0, 0, 0.68)"
@@ -242,7 +242,7 @@
       "value": "image-set(url('../img/common/bg-dark-1920.avif') type('image/avif') 1x, url('../img/common/bg-dark-3840.avif') type('image/avif') 2x, url('../img/common/bg-dark-1920.webp') type('image/webp') 1x, url('../img/common/bg-dark-3840.webp') type('image/webp') 2x)"
     },
     "color-page": {
-      "value": "#02040C"
+      "value": "#05070B"
     },
     "position": {
       "value": "center center"
@@ -254,38 +254,34 @@
       "value": "block"
     },
     "overlay": {
-      "value": "rgba(0, 4, 18, 0.34)"
+      "value": "rgba(4, 8, 14, 0.28)"
     },
     "overlay-page": {
-      "value": "linear-gradient(180deg, rgba(0, 2, 12, 0.08) 0%, rgba(1, 5, 18, 0.30) 42%, rgba(1, 6, 18, 0.80) 100%)"
+      "value": "linear-gradient(180deg, rgba(3, 6, 11, 0.06) 0%, rgba(4, 8, 14, 0.28) 42%, rgba(5, 8, 13, 0.76) 100%)"
     },
     "overlay-page-opacity": {
       "value": "1"
     }
   },
-  "surface": {
-    "filter": {
-      "value": "blur(20px) saturate(1.18)"
-    },
-    "filter-nav": {
-      "value": "blur(24px) saturate(1.24)"
-    },
-    "filter-nav-hero": {
-      "value": "blur(6px) saturate(1.04)"
-    }
+  "surface-filter": {
+    "value": "blur(12px) saturate(0.90)"
   },
-  "radius": {
-    "atmosphere": {
-      "value": "20px"
-    },
-    "panel": {
-      "value": "12px"
-    },
-    "control": {
-      "value": "999px"
-    },
-    "point": {
-      "value": "50%"
-    }
+  "surface-filter-nav": {
+    "value": "blur(14px) saturate(0.92)"
+  },
+  "surface-filter-nav-hero": {
+    "value": "blur(4px) saturate(0.90)"
+  },
+  "radius-atmosphere": {
+    "value": "6px"
+  },
+  "radius-panel": {
+    "value": "4px"
+  },
+  "radius-control": {
+    "value": "2px"
+  },
+  "radius-point": {
+    "value": "50%"
   }
 }

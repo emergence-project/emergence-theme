@@ -15,14 +15,21 @@
 {% endif %}
 {% assign project_number = include.index | prepend: "0" | slice: -2, 2 %}
 <article class="project-entry project-entry--{{ project.status }}">
-  <div class="project-entry__meta">
+  <div class="project-entry__row">
     <span class="project-entry__index" aria-hidden="true">{{ project_number }}</span>
+    <h3 class="project-entry__title">
+      {% if project.status == "completed" %}
+        <a href="{{ project_href }}" class="project-entry__title-link">
+          <span class="project-entry__title-text">{{ project.title }}</span><span class="project-entry__arrow" aria-hidden="true">{% if project_is_external %}↗{% else %}→{% endif %}</span>
+        </a>
+      {% else %}
+        <span class="project-entry__title-text">{{ project.title }}</span>
+      {% endif %}
+    </h3>
     <span class="project-entry__status project-entry__status--{{ project.status }}">
       {{ project.status | replace: "-", " " }}
     </span>
   </div>
-
-  <h3 class="project-entry__title">{{ project.title }}</h3>
 
   <p class="project-entry__description">{{ project.description }}</p>
 
@@ -31,11 +38,5 @@
       <li>{{ tag }}</li>
     {% endfor %}
   </ul>
-
-  {% if project.status == "completed" %}
-    <a href="{{ project_href }}" class="project-entry__link" aria-label="View {{ project.title | escape }}">
-      view project <span aria-hidden="true">{% if project_is_external %}↗{% else %}→{% endif %}</span>
-    </a>
-  {% endif %}
 </article>
 {% endunless %}
