@@ -101,13 +101,19 @@
 .sidebar-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: $spacing-xs * 0.5;
+  row-gap: $spacing-xs * 0.5;
 }
 
 .sidebar-tag {
   font-size: $fs-xs;
   font-weight: $fw-regular;
   color: $color-text-tertiary;
+
+  &:not(:first-child)::before {
+    content: '·';
+    margin: 0 0.6rem;
+    color: var(--color-separator);
+  }
 }
 
 // Breadcrumb
