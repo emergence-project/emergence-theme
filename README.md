@@ -1,4 +1,4 @@
-# emergence
+# glacier-stellar
 
 An image-led Jekyll design system for portfolios, notes, and reading lists.
 Glacier is the light environment; Galaxy is the dark environment.
@@ -11,13 +11,20 @@ The checked-out repository is a complete anonymous demo. It contains generic
 design-system specimens rather than a person's name, contact details, profile,
 or subject-area portfolio.
 
+**Not to be confused with:** this is the design system only. The live portfolio
+built on it is a separate repo (`sungmin-park-dev.github.io`). Two unrelated
+private repos also have "emergence" in the name — a Quartz-based knowledge
+garden (`emergence-project/emergence`) and a research-paper-tracking tool
+(`sungmin-park-dev/project-emergence`) — neither shares code or design with
+this theme.
+
 ## Try it now
 
 Requirements: Ruby 3.x and Bundler.
 
 ```bash
-git clone <repository-url> emergence
-cd emergence
+git clone <repository-url> glacier-stellar
+cd glacier-stellar
 ./bin/preview
 ```
 

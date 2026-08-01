@@ -424,7 +424,7 @@ Notes와 Readings는 각각 `site.notes`, `site.readings` 컬렉션과 `subcateg
 
 ## 오픈소스 템플릿 경계
 
-`emergence-theme`의 루트는 neutral flat editorial 시스템을 기본값으로 유지한다.
+이 저장소의 루트는 neutral flat editorial 시스템을 기본값으로 유지한다.
 이 디렉터리는 이미지, 93개 환경 토큰, Sass, 레이아웃, include, 컬렉션 인덱스를 함께
 제공하는 선택형 `glacier-stellar` 프리셋이다. 설치 후에도 라이트/다크 전환은
 Glacier와 Galaxy 사이의 유일한 런타임 환경 제어이며, 프리셋 자체를

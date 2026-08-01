@@ -6,7 +6,7 @@ preset_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 theme_root=$(CDPATH= cd -- "$preset_dir/../.." && pwd)
 
 if [ ! -f "$theme_root/_config.yml" ] || [ ! -d "$theme_root/_sass/emergence" ]; then
-  echo "Run this installer from inside an emergence-theme checkout." >&2
+  echo "Run this installer from inside a glacier-stellar checkout." >&2
   exit 1
 fi
 
