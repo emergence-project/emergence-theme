@@ -8,6 +8,9 @@
 
 $font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
 $font-monospace: 'JetBrains Mono', 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+// Long-form reading content (project bodies, About) — pairs with MathJax's
+// default TeX-style math font better than a UI sans-serif does.
+$font-serif: 'Source Serif 4', 'STIX Two Text', Georgia, 'Times New Roman', serif;
 
 $fw-thin: 100;
 $fw-extra-light: 200;

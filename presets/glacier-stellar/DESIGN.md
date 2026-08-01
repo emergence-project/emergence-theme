@@ -339,12 +339,22 @@ Glacier와 Galaxy는 동일한 구조와 형태 문법을 공유한다. 테마�
 
 ## 타이포그래피
 
-- 기본 글꼴은 Inter이며, 환경 라벨·태그·모노스페이스 요소에는 JetBrains Mono를
-  사용한다. 두 글꼴은 `_layouts/base.html`에서 Google Fonts로 불러오고,
-  시스템 스택을 fallback으로 유지한다.
+- 글꼴은 세 갈래로 역할이 고정되어 있다.
+  - Inter — 모든 제목과 UI 텍스트.
+  - JetBrains Mono — 환경 라벨·태그라인 등 메타데이터 요소.
+  - Source Serif 4 — 프로젝트 본문 prose 전용. 대비가 낮고 x-height가 커서
+    화면에서 가볍게 읽히며, 폴백 체인(`STIX Two Text` → `Georgia`)이
+    MathJax 수식과도 자연스럽게 어울린다. 다른 곳에는 쓰지 않는다.
+  세 글꼴은 `_layouts/base.html`에서 Google Fonts로 불러오고, 시스템 스택을
+  fallback으로 유지한다.
 - `emergence.`와 페이지 타이틀은 Thin/Light를 사용해 사진의 넓은 공간과 호흡한다.
-- 프로젝트 제목과 본문 위계는 Semibold/Regular로 읽기 성능을 유지한다.
+- 프로젝트 제목과 본문 섹션 제목은 Semibold, 본문 prose는 Regular로 위계를
+  나눈다.
 - 환경 라벨과 태그라인에만 모노스페이스와 넓은 자간을 제한적으로 사용한다.
+- 실제로 읽는 본문(`.post-body`, `.section-content`)은 항상
+  `--color-text-primary`를 쓴다 — 회색(secondary/tertiary)은 메타데이터·
+  라벨·"아직 활성화되지 않음"을 나타낼 때만 쓰고, 정독 대상 텍스트를
+  흐리지 않는다.
 - Galaxy에서는 text shadow가 사진의 밝은 별 위 대비를 보호하고, Glacier에서는
   흰 확산광 shadow가 짙은 글자를 분리한다.
 

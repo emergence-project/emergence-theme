@@ -200,13 +200,15 @@
 
 // Post Body
 .post-body {
-  font-size: $fs-md;
-  font-weight: $fw-light;
-  color: $color-text-secondary;
+  font-family: $font-serif;
+  font-size: 1.125rem;
+  font-weight: $fw-regular;
+  color: $color-text-primary;
   line-height: $lh-relaxed;
 
   h2, h3, h4, h5, h6 {
-    font-weight: $fw-light;
+    font-family: $font-primary;
+    font-weight: $fw-semibold;
     color: $color-text-primary;
     margin-top: $spacing-xl;
     margin-bottom: $spacing-md;
@@ -239,7 +241,7 @@
   }
 
   code {
-    font-family: 'Monaco', 'Menlo', monospace;
+    font-family: $font-monospace;
     font-size: $fs-sm;
     background: var(--color-code-bg);
     border: 1px solid var(--color-code-border);
@@ -255,12 +257,13 @@
     padding: $spacing-md;
     overflow-x: auto;
     margin: $spacing-md 0;
+    font-family: $font-monospace;
 
     code {
       background: none;
       border: none;
       padding: 0;
-      color: $color-text-secondary;
+      color: $color-text-primary;
     }
   }
 
@@ -396,16 +399,29 @@
 
 // Post Navigation
 .post-navigation {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: $spacing-md;
   margin-top: $spacing-xl;
   padding-top: $spacing-xl;
   border-top: 1px solid $color-border-glass;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: $spacing-xl;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: $color-border-glass;
+    transform: translateX(-50%);
+  }
 }
 
 .nav-previous,
 .nav-next {
+  min-width: 0;
   min-height: 80px;
 }
 
@@ -417,16 +433,17 @@
   display: flex;
   flex-direction: column;
   gap: $spacing-xs;
-  padding: $spacing-md;
-  border: 1px solid var(--color-separator);
-  border-radius: var(--radius-panel);
-  background: var(--color-panel-inner);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   text-decoration: none;
-  transition: background 180ms ease, border-color 180ms ease;
+  transition: color 180ms ease;
 
   &:hover {
-    background: var(--color-accent-bg-subtle);
-    border-color: $color-primary-blue;
+    .nav-title {
+      color: $color-primary-blue;
+    }
   }
 }
 
@@ -439,9 +456,15 @@
 }
 
 .nav-title {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: $fs-base;
   font-weight: $fw-light;
   color: $color-text-primary;
+  transition: color 180ms ease;
 }
 
 // Comments
@@ -492,17 +515,17 @@
   }
 
   .post-body {
-    font-size: $fs-base;
+    font-size: 1.0625rem;
 
     h2 { font-size: $fs-xl; }
     h3 { font-size: $fs-lg; }
   }
 
   .post-navigation {
-    grid-template-columns: 1fr;
+    gap: $spacing-sm;
   }
 
-  .nav-next {
-    text-align: left;
+  .nav-title {
+    font-size: $fs-sm;
   }
 }

@@ -3,6 +3,8 @@ title: "Project Title"
 description: "One-line description for the card preview."
 tags: [Design, Web, Documentation]
 link: ""                       # external URL or detail-page relative link
+# paper_url: "https://arxiv.org/abs/..."  # optional: set both paper_url + paper
+# paper: "arXiv:2601.20963 (2026)"        # to show a citation link under the card description
 order: 99                      # sort order within its group (lower = first)
 status: in-progress            # completed | in-progress | planned
 project_type: research         # research | systems — which homepage group this belongs to
